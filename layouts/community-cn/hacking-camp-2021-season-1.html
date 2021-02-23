@@ -16,10 +16,6 @@
     <section class="hackathon2020__banner">
 		<div class="container">
 			<div class="banner__inner"></div>
-			<div class="banner__buttons">
-				<a class="btn secondary btn-disabled">报名截止</a>
-				<a class="btn" href="https://slack.tidb.io/invite?team=tidb-community&channel=tidb-hackathon&ref=website" target="_blank" rel="noopener noreferrer">官方 SLACK</a>
-			</div>
 		</div>
 	</section>
 
@@ -87,7 +83,7 @@
 		<div class="container">
 			<ul class="moments">
 				{{- range $idx, $i := .Site.Data.hacking_camp_2021_s1.moments -}}
-				<li class="moment-item">
+				<li class="moment-item hacking-camp-moment">
 					<div class="moment__milestone"><span class="spot"></span></div>
 					<div class="moment__content">
 						<p>{{ $i.date }}</p>
@@ -111,22 +107,22 @@
     <section class="hackathon2020__section">
         <h2 class="section__title" id="judges">大赛评委</h2>
         <div class="list-flex container">
-            {{- range $idx, $i := .Site.Data.hackathon_cn_2020.judges -}}
+            {{- range $idx, $i := .Site.Data.hacking_camp_2021_s1.judges -}}
                 <div class="tutor-item">
                     <div class="tutor__avatar">
                         <img class="lazy" src="/images/svgs/loader-spinner.svg" data-original="{{ $i.avatar }}" alt="Tutor avatar" />
                     </div>
-                    <div class="tutor__name">{{ $i.name }}</div>
-                    <div class="tutor__title">{{ $i.title }}</div>
+                    <div class="tutor__name">{{ $i.name }} | {{ $i.team_name }} </div>
+                    <div class="tutor__title">{{ $i.word }}</div>
                 </div>
             {{- end -}}
         </div>
     </section>
 
 	<section class="hackathon2020__section">
-        <h2 class="section__title" id="partners">赞助合作</h2>
+        <h2 class="section__title" id="partners">其他合作支持</h2>
         <div class="list-flex container partners-list">
-			{{- range $idx, $i := .Site.Data.hackathon_cn_2020.sponsors -}}
+			{{- range $idx, $i := .Site.Data.hacking_camp_2021_s1.sponsors -}}
 				<a href="{{ $i.link }}" target="_blank" rel="noopener noreferrer">
 					<img class="lazy" data-original="{{ $i.img }}" src="/images/svgs/loader-spinner.svg" alt="sponsor logo">
 				</a>
