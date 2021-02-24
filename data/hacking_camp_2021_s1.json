@@ -49,7 +49,7 @@
       "btn_link": "https://slack.tidb.io/invite?team=tidb-community&channel=tide&ref=website"
     },
     {
-      "thumbnail": "https://download.pingcap.com/images/community/hackathon2020/winner-second.png",
+      "thumbnail": "https://download.pingcap.com/images/community/hacking-camp-2021-s1/winner-zhangyushao.png",
       "project_name": "zhangyushao",
       "project_intro": "Boost bug fix efficiency. In this project, we identified the inefficiency in how currently TiDB bug issues are processed. After a bug issue is submitted, a developer always tries to manually reproduce the case with the provided test cases. It is not rare that an issue is automatically tagged as a bug before it is finally classified as a not a bug/cannot reproduce by another developer. Our project aims to reduce manual efforts during the mentioned process and provide the developer with more precise and concise bug information. We plan to implement a Continuous Integration (CI) tool to smartly reproduce the bug issue and to previously tag it before any manual efforts. We also expect to link each issue with an environment to facilitate the later manual recheck by the developer.",
       "project_addr": "https://github.com/ti-community-infra/tichi/tree/issue-helper",
@@ -91,7 +91,13 @@
       "name": "Hacking camp 毕业典礼"
     }
   ],
-  "sponsors": [
+  "sponsors1": [
+    {
+      "img": "https://download.pingcap.com/images/community/hacking-camp-2021-s1/logo-future-cap.png",
+      "link": "https://www.future-cap.com/china/"
+    }
+  ],
+  "sponsors2": [
     {
       "img": "https://download.pingcap.com/images/community/hackathon2020/logo-zhihu.png",
       "link": "https://www.zhihu.com/"
@@ -107,10 +113,6 @@
     {
       "img": "https://download.pingcap.com/images/community/hackathon2020/logo-palfish.png",
       "link": "https://www.ipalfish.com/"
-    },
-    {
-      "img": "https://download.pingcap.com/images/community/hacking-camp-2021-s1/logo-future-cap.png",
-      "link": "https://www.future-cap.com/china/"
     }
   ]
 }
