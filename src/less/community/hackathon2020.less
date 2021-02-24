@@ -252,6 +252,11 @@
     height: 16em;
     background: left / contain no-repeat
       url('https://download.pingcap.com/images/community/hackathon2020/banner-inner.svg');
+
+    &.hacking-camp {
+      background: left / contain no-repeat
+      url('https://download.pingcap.com/images/community/hacking-camp-2021-s1/banner-inner.png');
+    }
   }
 
   .banner__buttons {
@@ -319,7 +324,7 @@
 }
 
 .hackathon2020__intro {
-  max-width: 54em;
+  max-width: 55em;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -371,6 +376,10 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+
+  .desc {
+    margin: 1rem 0;
+  }
 
   .winner-team {
     margin: 30px 15px;
@@ -786,6 +795,10 @@
 .tutor__name {
   margin-bottom: 0.5em;
   font-size: 1.125em;
+
+  &.hacking-camp {
+    font-weight: 600;
+  }
 }
 
 .hackathon2020__section-faq {
@@ -884,6 +897,10 @@
     height: 3em;
     width: auto;
     margin: 2em 4em;
+  }
+
+  &.hacking-camp {
+    padding-bottom: 3rem;
   }
 }
 
