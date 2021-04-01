@@ -25,7 +25,7 @@
 - 虎牙
   - [DBA 工程师](huya/dba.md)
 - 理想汽车
-  - [高级/资深 DBA](lixiangqiche/dba.md)
+  - [数据库平台高级开发工程师](lixiangqiche/engineer.md)
 - 涂鸦智能
   - [golang 资深工程师](tuyazhineng/senior-golang-engineer.md)
   - [golang 开发工程师](tuyazhineng/golang-engineer.md)
@@ -49,3 +49,7 @@
 - 建信金科
   - [分布式数据库 DBA 和 SQL 应用分析师](ccb/dba.md)
   - [分布式数据库内核和系统研发工程师](ccb/engineer.md)
+- 欢聚时代
+  - [数据库高级工程师](yy/engineer.md)
+- 金山办公软件
+  - [DBA 运维开发](kingsoft/dba.md)
