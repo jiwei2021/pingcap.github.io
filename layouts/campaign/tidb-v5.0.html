@@ -1,0 +1,78 @@
+{{- define "headTpl" -}}
+<meta name="baidu-site-verification" content="hrZ03lmoDB" />
+<meta name="google-site-verification" content="drHXf-Q97rcbwLZryBSFV8eW1pj1ddF4MHzZOfODhQU" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@100&display=swap"
+    rel="stylesheet">
+{{$.Scratch.Set "data_i18_cn" true }}
+{{$.Scratch.Set "data_i18_link" "https://en.pingcap.com/" }}
+{{- partial "head/preload-css" (dict "href" "/css/campaign/tidb-v5.0.css") -}}
+{{- partial "head/preload-css" (dict "href" "/css/vendor/swiper.css") -}}
+{{- end -}}
+
+{{- define "main" -}}
+<section class="campaign-v5-hero">
+    <img class="hero-bg hero-bg1" src="/images/campaign/tidb-v5.0/hero-bg1.svg" />
+    <img class="hero-bg hero-bg2" src="/images/campaign/tidb-v5.0/hero-bg2.svg" />
+    <div class="container">
+        <div class="slogan">
+            <div class="slogan-title">TiDB 5.0 正式发布</div>
+            <div class="slogan-subtitle">
+                <img src="/images/campaign/tidb-v5.0/tidb-logo.svg" />
+                <p>真正服务核心场景的企业级分布式数据库</p>
+            </div>
+            <button>立即预约抢先试用</button>
+        </div>
+        <div class="recrution-banner">
+            <img src="https://download.pingcap.com/images/community/activities/campus-job-2021.jpg" />
+        </div>
+    </div>
+</section>
+<section class="campaign-v5-intro">
+    <div class="container">
+        <div class="intro">
+            <p>经过近一年紧锣密鼓的开发和打磨，TiDB 5.0 具备金融行业核心业务场景的服务能力，成为真正服务核心场景的企业级分布式数据库。</p>
+            <p>TiDB 5.0 性能与稳定性得到显著提升，从而拥有更强大的 OLTP 金融级核心场景服务能力；在原有 HTAP 引擎 TiFlash 基础上引入 MPP 架构，使得众多企业的实时/交互式 BI
+                成为现实，为高成长企业和数字化创新场景提供了一栈式的数据服务底座，加速带动 HTAP 进入更多大型企业的数字化场景。</p>
+        </div>
+    </div>
+</section>
+
+<section class="campaign-v5-features">
+    <div class="container">
+        <div class="section-title">TiDB 5.0 新特性</div>
+        <div class="columns">
+            <div class="column">
+                <div class="feat-title">多项性能指标实现突破</div>
+                <div class="feat-subtitle">通过开启聚簇索引、异步提交事务、MPP 架构提升性能</div>
+                <p><strong>聚簇索引</strong>：开启后，TiDB 在 Sysbench 测试中，Read Write 性能提升达 58.1%;</p>
+                <p><strong>异步提交事务</strong>：开启后，平均延迟由 12.04 ms 降到 7.01ms ，降幅达 41.7%;</p>
+                <p><strong>MPP 引擎</strong>：MPP 引擎总体性能是 Greenplum 6.15.0 与 Apache Spark 3.1.1 的 2-3 倍，部分查询可达 8 倍。</p>
+                <div class="read-more"><a href="https://docs.pingcap.com/zh/tidb/v5.0/release-5.0.0"
+                        target="_blank">探索更多功能</a></div>
+            </div>
+            <div class="column align-center"><img src="/images/campaign/tidb-v5.0/feat-1.svg" /></div>
+        </div>
+        <div class="columns">
+            <div class="column align-center"><img src="/images/campaign/tidb-v5.0/feat-2.svg" /></div>
+            <div class="column">
+                <div>
+                    <div class="feat-title">多项性能指标实现突破</div>
+                    <div class="feat-subtitle">通过开启聚簇索引、异步提交事务、MPP 架构提升性能</div>
+                    <p><strong>聚簇索引</strong>：开启后，TiDB 在 Sysbench 测试中，Read Write 性能提升达 58.1%;</p>
+                    <p><strong>异步提交事务</strong>：开启后，平均延迟由 12.04 ms 降到 7.01ms ，降幅达 41.7%;</p>
+                    <p><strong>MPP 引擎</strong>：MPP 引擎总体性能是 Greenplum 6.15.0 与 Apache Spark 3.1.1 的 2-3 倍，部分查询可达 8 倍。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+{{- end -}}
+
+{{- define "footJS" -}}
+<script type="text/javascript" src="/js/vendor/swiper.min.js"></script>
+<script type="text/javascript" src="/js/multi_slides_carousel.js"></script>
+{{- end -}}
