@@ -1,5 +1,6 @@
 {{ $schedule := .schedule }}
 {{ $date := .date}}
+{{ $isCn := .isCn }}
 
 {{- range $idx, $i := $schedule -}}
 <div class="schedule {{ if eq $date "day2" }}hide-schedule {{ end }}{{ $date }}"
@@ -7,9 +8,9 @@
     <div class="venue-title">{{ $i.name }}</div>
     <table class="schedule-table">
         <tr class="head">
-            <td>{{if .isCn }}时间{{else}}Time{{end}}</td>
-            <td>{{if .isCn }}议题{{else}}Topic{{end}}</td>
-            <td>{{if .isCn }}演讲嘉宾{{else}}Speaker{{end}}</td>
+            <td>{{if $isCn }}时间{{else}}Time{{end}}</td>
+            <td>{{if $isCn }}议题{{else}}Topic{{end}}</td>
+            <td>{{if $isCn }}演讲嘉宾{{else}}Speaker{{end}}</td>
             <td></td>
         </tr>
         {{- range $idx2, $j := $i.schedules -}}
@@ -17,14 +18,14 @@
         <tr>
             <td>{{ $j.time }}</td>
             <td colspan="3">
-                <p class="TBA">{{if .isCn }}敬请期待{{else}}TBA{{end}}</p>
+                <p class="TBA">{{if $isCn }}敬请期待{{else}}TBA{{end}}</p>
             </td>
         </tr>
         {{- else if $j.break -}}
         <tr>
             <td>{{ $j.time }}</td>
             <td colspan="3">
-                <p class="TBA">{{if .isCn }}【中场休息】{{else}}Half Time{{end}}</p>
+                <p class="TBA">{{if $isCn }}【中场休息】{{else}}Half Time{{end}}</p>
             </td>
         </tr>
         {{- else -}}
