@@ -1,0 +1,854 @@
+@import '../variables.less';
+
+@B4: #6e77a3;
+@M2: #fafafa;
+@M4: #707070;
+@M5: #F4F4F4;
+@M6: #86868C;
+@light-blue: #465BF1;
+@section-title-color: #1D1D1F;
+@P1: 16px;
+@subtitle: 1rem;
+@section-title-font: 1.3rem;
+@tablet: ~'only screen and (min-width: 769px)';
+@max-width: 1048px;
+@P1adding-unit: 1rem;
+
+
+
+@mobile: ~'only screen and (max-width: 768px)';
+
+@theme-green: #3DB76A;
+@btn-bg: @theme-green;
+@btn-hover-bg: #329F5A;
+@theme-blue: #051853;
+@link-blue: #3D3FEA;
+@F1: #2c2c2c;
+@M1: #FFF;
+@M2: #F7F8F9;
+@T2: #E9EAEE;
+
+@H1: 28px;
+@H3: 20px;
+@H4: 18px;
+@P1: 16px;
+@P2: 14px;
+@LH: 1.7;
+
+.h-center {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+}
+
+
+.devcon2021 {
+    position: relative;
+
+    .container {
+        max-width: 1048px;
+        padding: 0 1rem;
+    }
+
+    .has-grey-bg {
+        background-color: @M2
+    }
+
+    .section-title {
+        padding: 6rem 0 2rem;
+        text-align: center;
+        font-size: @H1;
+        color: @F1;
+        font-weight: 500;
+
+        @media @mobile {
+            font-size: @H3;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .signup-btn {
+        position: relative;
+        margin: 2rem auto;
+        padding: 0.5rem 2rem;
+        width: max-content;
+        background-color: @btn-bg;
+        color: @M1;
+        border: none;
+        font-size: @H4;
+        border-radius: 30px;
+
+        &:hover {
+            background-color: @btn-hover-bg;
+        }
+
+        @media @mobile {
+            font-size: @P1;
+        }
+    }
+
+    .devcon2021-hero {
+        padding: 8rem 0 3rem;
+        background-color: @theme-blue;
+        text-align: center;
+
+        @media @mobile {
+            padding: 5rem 1rem;
+        }
+
+        .bg-container {
+            position: relative;
+            height: 35vh;
+            margin: 0 auto;
+
+            .bg {
+                height: 100%;
+                background: url('/images/community/devcon2021/hero-bg.svg') no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            @media @mobile {
+                height: 18vh;
+            }
+        }
+
+        .text-container {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            color: @M1;
+            font-size: @H4;
+            line-height: @LH;
+
+            @media @mobile {
+                font-size: @P1;
+
+                .hide-on-mobile {
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+
+    .devcon2021-navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(68, 68, 253, 0.08);
+
+        .navbar {
+            display: flex;
+            font-size: @H4;
+
+            @media @mobile {
+                font-size: @P2;
+            }
+        }
+
+        .navbar__item {
+            position: relative;
+            padding: 1em 0;
+            margin: 0 1em;
+            line-height: 1.5;
+            color: @F1;
+
+            &.active::after {
+                content: ' ';
+                position: absolute;
+                bottom: 0;
+                .h-center();
+                width: 2.5em;
+                height: 6px;
+                background-color: @theme-green;
+            }
+
+            &:hover {
+                color: @theme-green;
+            }
+        }
+
+        &.navbar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: @headerHeight;
+            z-index: 99;
+        }
+    }
+
+    .devcon2021-intro {
+        position: relative;
+        right: 0;
+        font-size: @P1;
+        color: @F1;
+        line-height: @LH;
+
+        .intro {
+            position: relative;
+            padding: 3rem 0 3rem 30%;
+
+            img {
+                position: absolute;
+
+                &.img1 {
+                    bottom: -2rem;
+                    left: 0;
+                    height: 90%;
+                }
+
+                &.img2 {
+                    right: 0;
+                    bottom: -3rem;
+                    height: 40%;
+                }
+            }
+        }
+
+        @media @mobile {
+            .intro {
+                padding: 3rem 0;
+                font-size: @P2;
+
+                img.img1 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .devcon2021-schedule {
+        .dates {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: @theme-green;
+
+            .date {
+                position: relative;
+                padding: 11px 1rem;
+                width: max-content;
+                color: @M1;
+                font-weight: bold;
+                font-size: @P1;
+                letter-spacing: 1px;
+
+                &.is-active {
+                    background-color: @theme-blue;
+
+                    &::after {
+                        display: block;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                @media @mobile {
+                    padding: 11px 0.5rem;
+                    font-size: @P2;
+                    width: 50%;
+                }
+            }
+        }
+
+        .venues {
+            background-color: @M2;
+            margin: 1rem 0 2rem;
+            color: @F1;
+
+            .day1,
+            .day2 {
+                padding: 1rem;
+
+                .venue {
+                    width: max-content;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.5rem 2rem;
+                    justify-content: start;
+                    cursor: pointer;
+
+                    p {
+                        font-size: @P1;
+                        padding-left: 0.5rem;
+                        font-weight: 500;
+                        position: relative;
+
+                        &:hover {
+                            color: @theme-green;
+
+                            &::after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .venue-detail {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: start;
+                    align-items: center;
+
+                    .time {
+                        min-width: 135px;
+                        font-size: @P1;
+                        text-align: left;
+                    }
+
+                    .venue-lists {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+
+                        .watch-link {
+                            font-size: @P1;
+                            color: @light-blue;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        @media only screen and (max-width: 414px) {
+                            justify-content: center;
+                        }
+                    }
+                }
+
+                .venue-detail-en {
+                    margin-bottom: 2rem;
+                }
+
+                @media only screen and (max-width: 414px) {
+                    .venue {
+
+                        p,
+                        .time {
+                            font-size: @P1 * 0.75;
+                        }
+                    }
+                }
+            }
+
+            .day2 {
+                .venue {
+                    justify-content: start;
+                }
+            }
+
+            .hide-schedule {
+                display: none !important;
+            }
+        }
+
+        .content {
+            margin: 3rem 0;
+            text-align: center;
+
+            .day1,
+            .day2 {
+                font-size: @P1;
+                color: @F1;
+
+                &.hide-schedule {
+                    display: none;
+                }
+            }
+        }
+
+        .schedule {
+            text-align: left;
+            margin-bottom: 2rem;
+            padding-top: 100px;
+            margin-top: -100px;
+            color: @F1;
+
+            .venue-title {
+                position: relative;
+                padding-left: 1rem;
+                margin-left: 1rem;
+                font-size: @P1;
+
+                &::before {
+                    content: '';
+                    border-left: 4px solid @theme-green;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+
+            .schedule-table {
+                .selected-bg {
+                    background-color: @M2;
+                    color: @theme-green;
+                    border-bottom: none;
+                }
+            }
+
+            table {
+                font-size: @P1;
+                margin-top: 1rem;
+                width: 100%;
+                border-collapse: collapse;
+                color: @F1;
+                opacity: 0.75;
+
+                .head {
+                    background-color: @M2;
+                    font-weight: bold;
+                    border-bottom: none;
+                }
+
+                tr {
+                    border-bottom: 1px solid @T2;
+                }
+
+                td {
+                    padding: 12px 10px;
+                    border: none;
+                }
+
+                td:nth-child(1) {
+                    width: 25%;
+                }
+
+                td:nth-child(2) {
+                    width: 40%;
+                }
+
+                td:nth-child(3) {
+                    width: 25%;
+                }
+
+                td:nth-child(4) {
+                    width: 10%;
+                    text-align: right;
+                }
+
+                .collapsable {
+                    cursor: pointer;
+
+                    &:hover {
+                        td {
+                            color: @theme-green;
+                        }
+                    }
+
+                    .add-icon {
+                        font-weight: bold;
+                        color: @theme-green;
+                    }
+                }
+
+                .detail-block {
+                    display: none;
+                    background-color: @M2;
+                }
+
+                @media only screen and (max-width: 414px) {
+                    font-size: @P1 * 0.75;
+
+                    td:nth-child(1) {
+                        width: 12rem;
+                    }
+
+                    td:nth-child(2) {
+                        width: 20rem;
+                    }
+
+                    td:nth-child(3) {
+                        width: 6rem;
+                    }
+
+                    .speaker {
+                        display: none;
+                    }
+                }
+            }
+
+            &.hide-schedule {
+                display: none;
+            }
+        }
+    }
+
+    .devcon2021-speakers {
+        background-color: @M2;
+        text-align: center;
+
+        .tutor-list {
+            max-width: 1200px;
+            color: white;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 2rem 0 4rem;
+
+            .tutor {
+                position: relative;
+                width: 235px;
+                height: 300px;
+                margin: 15px 0;
+                text-align: center;
+                line-height: 1.7;
+                color: @F1;
+
+                .tutor-avatar {
+                    width: 140px;
+                    height: 140px;
+                    margin: 0 auto;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+
+                .name {
+                    font-size: @H4;
+                    margin-top: 1rem;
+                    font-weight: 600;
+                }
+
+                .title {
+                    font-size: @P1;
+                    padding: 0.5rem 1rem;
+                    font-weight: normal;
+                    line-height: 1.7;
+                }
+
+                @media only screen and (max-width: 414px) {
+                    width: 150px;
+                    height: 200px;
+
+                    .tutor-avatar {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    .title {
+                        font-size: @P1 * 0.75;
+                    }
+                }
+            }
+        }
+    }
+
+    .devcon2021-sponsors {
+        text-align: center;
+
+        h3 {
+            margin-top: 2rem;
+            font-size: @H3;
+            font-weight: 500;
+        }
+
+        .medias {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            img {
+                width: 250px;
+                height: 100%;
+                padding: 1rem;
+            }
+        }
+
+        .content {
+            font-size: @P1;
+            color: @F1;
+            text-align: center;
+            line-height: @LH;
+
+            a {
+                color: @link-blue
+            }
+        }
+    }
+
+    .devcon2021-notice {
+        .notice-navbar {
+            display: flex;
+            justify-content: center;
+            color: @M1;
+            background-color: @theme-green;
+
+            .notice-tab {
+                padding: 10px 1rem;
+                width: 20%;
+                text-align: center;
+                font-size: @P1;
+
+                &.is-active,
+                &:hover {
+                    background-color: @theme-blue;
+                    cursor: pointer;
+                }
+
+                @media @mobile {
+                    width: 33.33%;
+                }
+            }
+        }
+
+        .content-list {
+            .tabContent {
+                display: none;
+                padding: 2rem 0;
+                font-size: @P1;
+
+                p {
+                    line-height: @LH;
+                }
+
+                .divider {
+                    position: relative;
+                    margin: 2rem 0 2rem 1rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border-left: 4px solid @theme-green;
+                        height: 100%;
+                        left: -1rem;
+                        top: 0;
+                        bottom: -7px;
+                    }
+                }
+
+                &.is-active {
+                    display: block;
+                }
+
+                .image {
+                    margin-bottom: 1rem;
+
+                    span {
+                        padding-left: 2rem;
+                        color: @theme-green
+                    }
+                }
+
+
+                &:nth-child(1) {
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    img {
+                        width: 300px;
+                    }
+                }
+
+                .hotel-intro {
+                    font-size: @P2;
+                }
+
+                .hotel-list {
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    .hotel {
+                        position: relative;
+                        padding: 2rem 0;
+                        width: 50%;
+
+                        img {
+                            width: 300px;
+                        }
+
+                        .content {
+                            padding: 1.5rem 0;
+                        }
+                    }
+                }
+
+                .modal-overlay img {
+                    width: 80%;
+                }
+
+                @media @mobile {
+                    font-size: @P2;
+
+                    .image {
+                        span {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .hotel-list {
+                        .hotel {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-overlay {
+            background-color: rgba(26, 26, 36, 0.8);
+        }
+    }
+
+    .devcon2021-signup {
+        position: relative;
+        width: 100%;
+        background: url("/images/community/devcon2021/ribbon-bg.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .btn-wrap {
+            padding-bottom: 2rem;
+        }
+
+        .sign-up {
+            position: relative;
+
+            p {
+                padding: 3rem 0 0;
+                text-align: center;
+                color: @M1;
+            }
+
+            .button {
+                font-size: @P1;
+                padding: 0.5rem 1.5rem;
+            }
+
+            .bg {
+                position: absolute;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+
+            .el1 {
+                position: absolute;
+                left: 10%;
+                top: 30%;
+                transform: rotate(-45deg);
+                height: 100px;
+
+            }
+
+            .el2 {
+                position: absolute;
+                right: 10%;
+                bottom: -20%;
+                height: 100px;
+            }
+        }
+
+        @media @mobile {
+            background: url("/images/community/devcon2021/ribbon-bg-mobile.svg") no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .btn-wrap {
+                padding: 2rem 0 1rem;
+            }
+
+            .sign-up {
+                p {
+                    padding-top: 0;
+                }
+
+                .el2,
+                .el1 {
+                    height: 50px;
+                }
+
+                .el1 {
+                    top: 60%;
+                }
+            }
+        }
+    }
+
+    .devcon2021-reviews {
+        .review-list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin: 3rem 0;
+
+            .item {
+                width: 30%;
+            }
+
+            img {
+                margin: 1rem;
+                width: 100%;
+                transition: box-shadow 0.3s;
+
+                &:hover {
+                    box-shadow: 0 5px 14px 3px rgba(0, 0, 0, 0.3);
+                }
+
+
+            }
+
+            @media @mobile {
+                justify-content: left;
+
+                .item {
+                    width: 43%;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
+    .signup-code {
+        position: fixed;
+        top: 50%;
+        right: 1rem;
+        height: 80px;
+        width: 80px;
+        background: url('/images/community/devcon2021/sign-up.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        cursor: pointer;
+        z-index: 999;
+
+        &:hover {
+            background: url('/images/community/devcon2021/qrcode.svg') no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}

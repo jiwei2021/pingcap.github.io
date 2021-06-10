@@ -11,11 +11,13 @@
         if (key === "Enter") {
             if ($('#search-input').data('lang') == 'cn') {
                 lang = 'zh'
+            } else {
+                lang = 'en'
             }
 
             const query = $('#search-input').val()
             if (query) {
-                url = "https://docs.pingcap.com/" + (lang == 'zh' ? 'zh/' : '') + "search/?lang=" + lang + "&type=tidb&version=v4.0&q=" + query
+                url = "https://docs.pingcap.com/" + (lang == 'zh' ? 'zh/' : '') + "search/?lang=" + lang + "&type=tidb&version=stable&q=" + query
                 window.location.href = url
             }
         }

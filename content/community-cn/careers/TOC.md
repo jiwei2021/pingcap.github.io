@@ -2,7 +2,6 @@
 
 ## 目录
 
-
 - Paypay
   - [Database Administrator](paypay/dba.md)
 - Square
@@ -34,8 +33,7 @@
 - 小嘿科技
   - [数据库工程师](xiaoheikeji/engineer.md)
 - 小米
-  - [DBA 工程师](xiaomi/dba.md)
-  - [分布式数据库研发（偏内核）](xiaomi/engineer.md)
+  - [DBA](xiaomi/dba.md)
 - 知乎
   - [微服务平台开发工程师](zhihu/microservice-engineer.md)
   - [大数据实时处理平台研发工程师](zhihu/real-time-engineer.md)
@@ -53,3 +51,17 @@
   - [数据库高级工程师](yy/engineer.md)
 - 金山办公软件
   - [DBA 运维开发](kingsoft/dba.md)
+- 360 公司
+  - [数据库运维工程师](360/engineer.md)
+- 火花思维
+  - [高级 DBA 工程师](huohua/dba.md)
+- 水滴公司
+  - [DBA 数据库工程师](shuidi/engineer.md)
+- 广州视睿科技
+  - [大数据运维工程师](shirui/engineer.md)
+- 蓝城兄弟
+  - [系统运维工程师](bluecity/operations-engineer.md)
+  - [前端研发工程师](bluecity/front-end-engineer.md)
+  - [Golang 开发工程师](bluecity/golang-engineer.md)
+- 深科技
+  - [大数据工程师](shenkeji/engineer.md)
