@@ -5,9 +5,9 @@
         "time": "9:30 - 12:00",
         "venues": [
           {
-            "name": "主论坛",
+            "name": "Keynote —— 开放、连接、预见",
             "id": "day1-1",
-            "icon": "/images/community/devcon2020/el-main.svg",
+            "icon": "/images/community/devcon2021/day1-icon1.svg",
             "main": true
           }
         ]
@@ -16,56 +16,19 @@
         "time": "13:00 - 18:20",
         "venues": [
           {
-            "name": "TiDB 技术分论坛",
+            "name": "业务敏捷与云原生 专题论坛",
             "id": "day1-2",
-            "icon": "/images/community/devcon2020/el-finance.svg"
+            "icon": "/images/community/devcon2021/day1-icon2.svg"
           },
           {
-            "name": "第三方生态分论坛",
+            "name": "实时洞察与业务智能 专题论坛",
             "id": "day1-3",
-            "icon": "/images/community/devcon2020/el-business.svg"
+            "icon": "/images/community/devcon2021/day1-icon3.svg"
           },
           {
-            "name": "分论坛 3",
+            "name": " 数据创新技术与开放生态 专题论坛",
             "id": "day1-3",
-            "icon": "/images/community/devcon2020/el-business.svg"
-          }
-        ]
-      }
-    ],
-    "day2": [
-      {
-        "time": "9:00 - 12:25",
-        "venues": [
-          {
-            "name": "TiDB 技术分论坛",
-            "id": "day1-2",
-            "icon": "/images/community/devcon2020/el-finance.svg"
-          },
-          {
-            "name": "第三方生态分论坛",
-            "id": "day1-3",
-            "icon": "/images/community/devcon2020/el-business.svg"
-          },
-          {
-            "name": "分论坛 3",
-            "id": "day1-3",
-            "icon": "/images/community/devcon2020/el-business.svg"
-          }
-        ]
-      },
-      {
-        "time": "13:30 - 18:25",
-        "venues": [
-          {
-            "name": "电信/医疗/能源/制造业/高科技 专题论坛",
-            "id": "day2-3",
-            "icon": "/images/community/devcon2020/el-service.svg"
-          },
-          {
-            "name": "教育/视频/资讯 专题论坛",
-            "id": "day2-4",
-            "icon": "/images/community/devcon2020/el-education.svg"
+            "icon": "/images/community/devcon2021/day1-icon4.svg"
           }
         ]
       }
@@ -2327,28 +2290,28 @@
 
   "instructors_2021": [
     {
-      "name": "蔡江",
-      "avatar": "/images/community/devcon2020/speakers/caijiang.png",
-      "title": "高级运维工程师",
-      "company": "中通快递"
+      "name": "刘奇",
+      "avatar": "/images/community/devcon2021/liuqi.png",
+      "title": "创始人兼 CEO",
+      "company": "PingCAP"
     },
     {
-      "name": "岑启超",
-      "avatar": "/images/community/devcon2020/speakers/cenqichao.png",
-      "title": "开发经理",
-      "company": "金山办公"
+      "name": "黄东旭",
+      "avatar": "/images/community/devcon2021/dongxu.png",
+      "title": "联合创始人兼 CTO",
+      "company": "PinCAP"
     },
     {
-      "name": "常彦德",
-      "avatar": "/images/community/devcon2020/speakers/changyande.png",
-      "title": "存储组件产品部负责人",
-      "company": "UCloud"
+      "name": "申砾",
+      "avatar": "/images/community/devcon2021/shenli.png",
+      "title": "国际业务负责人",
+      "company": "PingCAP"
     },
     {
-      "name": "陈付",
-      "avatar": "/images/community/devcon2020/speakers/chenfu.png",
-      "title": "TiKV Maintainer",
-      "company": "一点资讯"
+      "name": "朱巍",
+      "avatar": "/images/community/devcon2021/zhuwei.png",
+      "title": "中国区商业化总经理",
+      "company": "PingCAP"
     }
   ],
 
