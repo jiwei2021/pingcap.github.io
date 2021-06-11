@@ -155,7 +155,7 @@
         .navbar__item {
             position: relative;
             padding: 1em 0;
-            margin: 0 1em;
+            margin: 0 0.5em;
             line-height: 1.5;
             color: @F1;
 
@@ -274,6 +274,10 @@
                     justify-content: start;
                     cursor: pointer;
 
+                    img {
+                        width: 30px;
+                    }
+
                     p {
                         font-size: @P1;
                         padding-left: 0.5rem;
@@ -294,31 +298,12 @@
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: start;
-                    align-items: center;
+                    align-items: baseline;
 
                     .time {
                         min-width: 135px;
                         font-size: @P1;
                         text-align: left;
-                    }
-
-                    .venue-lists {
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-
-                        .watch-link {
-                            font-size: @P1;
-                            color: @light-blue;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-
-                        @media only screen and (max-width: 414px) {
-                            justify-content: center;
-                        }
                     }
                 }
 
@@ -849,6 +834,51 @@
             background: url('/images/community/devcon2021/qrcode.svg') no-repeat;
             background-size: contain;
             background-position: center;
+        }
+
+        &.mobile {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            top: auto;
+            right: auto;
+            text-align: center;
+            background: none;
+            background-color: @theme-green;
+            cursor: pointer;
+            z-index: 999;
+
+            p {
+                padding: 0.5rem;
+                color: @M1;
+                text-align: center;
+            }
+
+            .qrcode {
+                display: none;
+                margin: 0 auto;
+            }
+
+            .close-icon {
+                position: absolute;
+                display: none;
+                padding: 1rem;
+                right: 1rem;
+                width: 2rem;
+                color: @M1;
+            }
+        }
+
+        @media @mobile {
+            &.pc {
+                display: none;
+            }
+
+            &.mobile {
+                display: block;
+            }
         }
     }
 }

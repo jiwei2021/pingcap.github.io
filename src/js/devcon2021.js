@@ -93,4 +93,17 @@ $(document).ready(function() {
     $('.j-hotel-overlay').fadeIn()
     $('.j-hotel-overlay, .modal').addClass('active')
   })
+
+  $('#signup').click(function() {
+    console.log('clicked')
+    $(this).css('display', 'none')
+    $('.qrcode').css('display', 'block')
+    $('.close-icon').css('display', 'block')
+  })
+
+  $('.close-icon').click(function() {
+    $(this).css('display', 'none')
+    $('.qrcode').css('display', 'none')
+    $('#signup').css('display', 'block')
+  })
 })
