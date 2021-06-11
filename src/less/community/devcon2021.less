@@ -1,21 +1,5 @@
 @import '../variables.less';
 
-@B4: #6e77a3;
-@M2: #fafafa;
-@M4: #707070;
-@M5: #F4F4F4;
-@M6: #86868C;
-@light-blue: #465BF1;
-@section-title-color: #1D1D1F;
-@P1: 16px;
-@subtitle: 1rem;
-@section-title-font: 1.3rem;
-@tablet: ~'only screen and (min-width: 769px)';
-@max-width: 1048px;
-@P1adding-unit: 1rem;
-
-
-
 @mobile: ~'only screen and (max-width: 768px)';
 
 @theme-green: #3DB76A;
@@ -92,6 +76,7 @@
     }
 
     .devcon2021-hero {
+        position: relative;
         padding: 8rem 0 3rem;
         background-color: @theme-blue;
         text-align: center;
@@ -100,42 +85,135 @@
             padding: 5rem 1rem 2rem;
         }
 
-        .bg-container {
-            position: relative;
-            height: 35vh;
-            margin: 0 auto;
-
-            .bg {
-                height: 100%;
-                background: url('/images/community/devcon2021/hero-bg.svg') no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-
-            @media @mobile {
-                height: 18vh;
-            }
-        }
-
-        .text-container {
+        .hero-pc {
             display: flex;
             flex-flow: row wrap;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2rem;
-            color: @M1;
-            font-size: @H4;
-            line-height: @LH;
+            text-align: left;
 
-            @media @mobile {
-                font-size: @P1;
+            .column {
+                &:nth-child(1) {
+                    width: 60%;
+                }
+                &:nth-child(2) {
+                    width: 40%;
+                }
 
-                .hide-on-mobile {
-                    display: none;
+                .logo {
+                    width: 50%;
+                }
+
+                .slogan {
+                    margin: 3rem 0 1rem;
+                    width: 85%
+                }
+
+                p {
+                    font-size: @P1;
+                    color: @M1
+                }
+
+                .signup-btn {
+                    margin: 1rem 0 3rem;
                 }
             }
 
+            @media @mobile {
+                display: none;
+            }
+        }
 
+        .hero-mobile {
+            display: none;
+
+            p {
+                color: @M2
+            }
+
+            img {
+                margin: 1rem 0;
+
+                &:nth-child(1) {
+                    width: 80%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+
+                &:nth-child(3) {
+                    width: 70%;
+                }
+            }
+
+            .column {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-between;
+
+
+                img {
+                    width: 10%;
+                    opacity: 0.7;
+                }
+            }
+
+            @media @mobile {
+                display: block;
+            }
+        }
+
+        .bg-el-1,
+        .bg-el-2,
+        .bg-el-3,
+        .bg-el-4 {
+            position: absolute;
+            opacity: 0.7;
+
+            @media @mobile {
+                display: none;
+            }
+        }
+
+        .bg-el-1,
+        .bg-el-4 {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            left: 3rem;
+            top: 5rem;
+            transform: rotate(-45deg);
+            background: url('/images/community/devcon2021/bg-el-2.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-2 {
+            height: 150px;
+            width: 150px;
+            left: -75px;
+            bottom: 5rem;
+            background: url('/images/community/devcon2021/bg-el-3.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-3 {
+            height: 150px;
+            width: 150px;
+            right: -75px;
+            top: 5rem;
+            transform: rotate(90deg);
+            background: url('/images/community/devcon2021/bg-el-1.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-4 {
+            bottom: 2rem;
+            top: auto;
+            right: 5rem;
+            left: auto;
         }
     }
 
@@ -152,7 +230,7 @@
             }
         }
 
-        .navbar__item {
+        .navbar-item {
             position: relative;
             padding: 1em 0;
             margin: 0 0.5em;
@@ -278,32 +356,37 @@
                         width: 30px;
                     }
 
-                    p {
-                        font-size: @P1;
-                        padding-left: 0.5rem;
-                        font-weight: 500;
-                        position: relative;
+                    p:hover {
+                        color: @theme-green;
 
-                        &:hover {
-                            color: @theme-green;
-
-                            &::after {
-                                display: block;
-                            }
+                        &::after {
+                            display: block;
                         }
                     }
+                }
+
+                p {
+                    font-size: @P1;
+                    padding-left: 0.5rem;
+                    font-weight: 500;
+                    position: relative;
                 }
 
                 .venue-detail {
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: start;
-                    align-items: baseline;
+                    align-items: flex-start;
 
                     .time {
                         min-width: 135px;
                         font-size: @P1;
                         text-align: left;
+                        padding: 14px 0;
+
+                        @media @mobile {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -337,8 +420,7 @@
             margin: 3rem 0;
             text-align: center;
 
-            .day1,
-            .day2 {
+            .day1 {
                 font-size: @P1;
                 color: @F1;
 
@@ -355,18 +437,43 @@
             margin-top: -100px;
             color: @F1;
 
-            .venue-title {
+            .forum {
                 position: relative;
-                padding-left: 1rem;
-                margin-left: 1rem;
-                font-size: @P1;
+                background-color: @M2;
+                padding: 1.5rem 2rem;
 
                 &::before {
                     content: '';
-                    border-left: 4px solid @theme-green;
-                    height: 100%;
                     position: absolute;
+                    border-top: 4px solid @theme-green;
+                    width: 100%;
+                    top: 0;
                     left: 0;
+                }
+
+                .forum-title {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .venue-title {
+                        position: relative;
+                        font-size: @P1;
+                    }
+
+                    img {
+                        width: 50px;
+                    }
+                }
+
+                .venue-desc {
+                    font-size: @P1;
+                    padding-top: 1rem;
+
+                    @media @mobile {
+                        font-size: @P2;
+                    }
                 }
             }
 
@@ -397,7 +504,7 @@
                 }
 
                 td {
-                    padding: 12px 10px;
+                    padding: 12px 10px 12px 2rem;
                     border: none;
                 }
 
@@ -436,6 +543,10 @@
                 .detail-block {
                     display: none;
                     background-color: @M2;
+
+                    .pagraphList {
+                        padding-bottom: 1rem;
+                    }
                 }
 
                 @media only screen and (max-width: 414px) {
@@ -530,6 +641,12 @@
                 }
             }
         }
+
+        .more-tutor {
+            padding-bottom: 3rem;
+            font-size: @P1;
+            color: @F1;
+        }
     }
 
     .devcon2021-sponsors {
@@ -545,16 +662,17 @@
             width: 100%;
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
+            justify-content: space-around;
 
             img {
-                width: 250px;
+                width: 200px;
                 height: 100%;
                 padding: 1rem;
             }
         }
 
         .content {
+            padding-top: 1rem;
             font-size: @P1;
             color: @F1;
             text-align: center;
@@ -822,6 +940,10 @@
         position: fixed;
         top: 50%;
         right: 1rem;
+        color: @M1;
+        background-color: @theme-green;
+        font-size: @P1;
+        padding: 1rem;
         height: 80px;
         width: 80px;
         background: url('/images/community/devcon2021/sign-up.svg') no-repeat;
@@ -829,12 +951,6 @@
         background-position: center;
         cursor: pointer;
         z-index: 999;
-
-        &:hover {
-            background: url('/images/community/devcon2021/qrcode.svg') no-repeat;
-            background-size: contain;
-            background-position: center;
-        }
 
         &.mobile {
             display: none;
@@ -844,29 +960,16 @@
             height: auto;
             top: auto;
             right: auto;
+            padding: 0;
             text-align: center;
             background: none;
             background-color: @theme-green;
             cursor: pointer;
             z-index: 999;
 
-            p {
-                padding: 0.5rem;
+            a {
                 color: @M1;
                 text-align: center;
-            }
-
-            .qrcode {
-                display: none;
-                margin: 0 auto;
-            }
-
-            .close-icon {
-                position: absolute;
-                display: none;
-                padding: 10px;
-                right: 1rem;
-                width: 2rem;
             }
         }
 
@@ -877,6 +980,7 @@
 
             &.mobile {
                 display: block;
+                padding: 0.5rem;
             }
         }
     }

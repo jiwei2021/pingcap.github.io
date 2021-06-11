@@ -27,31 +27,55 @@ DevCon 2021
 <div class="devcon2021">
     <section class="devcon2021-hero">
         <div class="container">
-            <div class="bg-container">
-                <div class="bg"></div>
+            <div class="bg-el-1"></div>
+            <div class="bg-el-2"></div>
+            <div class="bg-el-3"></div>
+            <div class="bg-el-4"></div>
+            <div class="hero-pc">
+                <div class="column">
+                    <img class="logo" src="/images/community/devcon2021/pingcap-tidb-logo.png" />
+                    <img class="slogan" src="/images/community/devcon2021/slogan.svg" />
+                    <a href="http://www.huodongxing.com/event/3601574266800?qd=website" target="_blank">
+                        <div class="button signup-btn">立即报名</div>
+                    </a>
+                    <p>2021 年 7 月 23 日 - 24 日 | 北京市 朝阳区 北京望京凯悦酒店 | PingCAP 主办</p>
+                </div>
+                <div class="column">
+                    <img src="/images/community/devcon2021/hero-bg.svg" />
+                </div>
             </div>
-            <div class="text-container">
+            <div class="hero-mobile">
+                <img src="/images/community/devcon2021/hero-bg.svg" />
+                <img class="slogan" src="/images/community/devcon2021/slogan.svg" />
+                <img class="logo" src="/images/community/devcon2021/pingcap-tidb-logo.png" />
                 <p>2021 年 7 月 23 日 - 24 日 </p>
-                <p><span class="hide-on-mobile">| </span>北京市 朝阳区 北京望京凯悦酒店 | PingCAP 主办</p>
+                <p>北京市 朝阳区 北京望京凯悦酒店 | PingCAP 主办</p>
+                <div class="column">
+                    <img src="/images/community/devcon2021/bg-el-2.svg" />
+                    <img src="/images/community/devcon2021/bg-el-2.svg" />
+                    <a href="http://www.huodongxing.com/event/3601574266800?qd=website" target="_blank">
+                        <div class="button signup-btn">立即报名</div>
+                    </a>
+                    <img src="/images/community/devcon2021/bg-el-2.svg" />
+                    <img src="/images/community/devcon2021/bg-el-2.svg" />
+                </div>
             </div>
-
-            <a href="https://9432153690779.huodongxing.com/event/3601574266800" target="_blank"><div class="button signup-btn">立即报名</div></a>
         </div>
     </section>
 
     <section class="devcon2021-navbar navbar-sticky">
         <div class="container">
             <ul class="navbar">
-                <li class="navbar__item">
+                <li class="navbar-item">
                     <a href="#agenda">会议议程</a>
                 </li>
-                <li class="navbar__item">
+                <li class="navbar-item">
                     <a href="#speaker">嘉宾介绍</a>
                 </li>
-                <li class="navbar__item">
+                <li class="navbar-item">
                     <a href="#sponsors">赞助合作</a>
                 </li>
-                <li class="navbar__item">
+                <li class="navbar-item">
                     <a href="#notice">参会须知</a>
                 </li>
             </ul>
@@ -63,7 +87,7 @@ DevCon 2021
             <div class="intro">
                 <img class="img1" src="/images/community/devcon2021/bg-el-3.svg" />
                 <p>“PingCAP DevCon” 是由 PingCAP
-                    举办的年度顶级数据技术盛会，大会已连续举办四年，成为观测开源产业、数据库前瞻趋势的风向标。本次大会旨在探讨前沿科技与数字化趋势的融合，解读行业领袖观点，分享技术大咖实战经验，展示用户场景的多元化创新，并展现多元化数据技术生态。
+                    举办的年度顶级数据技术盛会，大会已连续举办三年，成为观测开源产业、数据库前瞻趋势的风向标。本次大会旨在探讨前沿科技与数字化趋势的融合，解读行业领袖观点，分享技术大咖实战经验，展示用户场景的多元化创新，并展现多元化数据技术生态。
                 </p>
                 <img class="img2" src="/images/community/devcon2021/bg-el-1.svg" />
             </div>
@@ -74,8 +98,8 @@ DevCon 2021
         <div class="container">
             <h2 id="agenda" class="section-title">会议议程</h2>
             <div class="dates">
-                <div class="date date1 is-active">Day 1 - 2021. 07. 24</div>
-                <div class="date date2">Day 0 - 2021. 07. 23</div>
+                <div class="date date1 is-active">大会日 - 2021. 07. 24</div>
+                <div class="date date2">开发者嘉年华 - 2021. 07. 23</div>
             </div>
             <div class="venues">
                 <div class="day1">
@@ -93,20 +117,20 @@ DevCon 2021
                     </div>
                     {{- end -}}
                 </div>
+                <div class="day2 hide-schedule">
+                    <p>大会前一天我们将举办为期半天的开发者嘉年华，活动将包括 TiDB 调优竞赛、Coding 动手实验、PingCAP Education 课程体验等丰富活动，现场更有吐槽大会与精美晚宴，大家千万不要错过！</p>
+                </div>
             </div>
+
+            {{- partial "community-cn/devcon2020-schedule-table.html" (dict "schedule" .Site.Data.devcon.devcon2021_day1_schedule "global" . "date" "day1" "isCn" "true" "devcon2021" "true") -}}
+
+            {{- partial "community-cn/devcon2020-schedule-table.html" (dict "schedule" .Site.Data.devcon.devcon2021_day2_schedule "global" . "date" "day2" "isCn" "true" "isPreDay" "true") -}}
 
             <div class="content">
                 <div class="day1">
-                    具体日程敬请期待
-                </div>
-                <div class="day2 hide-schedule">
-                    本次 PRE-DAY 为开发者嘉年华，活动将集动手操作、吐槽大会、吃喝玩乐为一体，具体日程请大家敬请期待！
+                    分论坛日程敬请期待！
                 </div>
             </div>
-
-            <!-- {{- partial "community-cn/devcon2020-schedule-table.html" (dict "schedule" .Site.Data.devcon.devcon2020_day1_schedule "global" . "date" "day1" "isCn" "true") -}}
-
-            {{- partial "community-cn/devcon2020-schedule-table.html" (dict "schedule" .Site.Data.devcon.devcon2020_day2_schedule "global" . "date" "day2" "isCn" "true") -}} -->
         </div>
     </section>
 
@@ -127,19 +151,20 @@ DevCon 2021
                 {{- end -}}
                 {{- end -}}
             </div>
+            <div class="more-tutor">更多嘉宾持续更新中</div>
         </div>
     </section>
 
     <section class="devcon2021-sponsors">
         <div class="container">
             <h2 id="sponsors" class="section-title">赞助合作</h2>
-            <!-- <h3>铂金赞助</h3>
+            <h3>白银赞助</h3>
             <div class="medias">
-                {{- range $idx, $i := .Site.Data.devcon.support_meida2020 -}}
+                {{- range $idx, $i := .Site.Data.devcon.support_meida2021 -}}
                 <img class="lazy" src="/images/svgs/loader-spinner.svg" data-original="{{ $i }}" />
                 {{- end -}}
             </div>
-            <h3>金牌赞助</h3>
+            <!-- <h3>金牌赞助</h3>
             <div class="medias">
                 {{- range $idx, $i := .Site.Data.devcon.support_meida2020 -}}
                 <img class="lazy" src="/images/svgs/loader-spinner.svg" data-original="{{ $i }}" />
@@ -153,7 +178,7 @@ DevCon 2021
             </div> -->
             <div class="content">
                 <p>更多合作伙伴敬请期待</p>
-                <p>如有意向赞助，欢迎联系 <a href="mailto:Elaine.xu@uniwaygroup.com">Elaine.xu@uniwaygroup.com</a></p>
+                <p>如有意向赞助，欢迎联系 <a href="mailto:devcon2021@pingcap.com">devcon2021@pingcap.com</a></p>
             </div>
         </div>
     </section>
@@ -223,7 +248,8 @@ DevCon 2021
                     <p>地铁：7 号线（花庄方向）至九龙山地铁站，换乘地铁 14 号线（善各庄方向）至阜通地铁站 C 东南口出，步行 694 米至北京望京凯悦酒店。</p>
                     <p>打车：北京西站至北京望京凯悦酒店，40 分钟车程，费用约 60 元。</p>
                     <p>六、北京站：</p>
-                    <p>地铁：2 号线（建国门方向）至朝阳门地铁站，换乘地铁 6 号线（潞城方向）至金台路地铁站，换乘地铁 14 号线（善各庄方向）至阜通地铁站 C 东南口出，步行 694 米至北京望京凯悦酒店。</p>
+                    <p>地铁：2 号线（建国门方向）至朝阳门地铁站，换乘地铁 6 号线（潞城方向）至金台路地铁站，换乘地铁 14 号线（善各庄方向）至阜通地铁站 C 东南口出，步行 694 米至北京望京凯悦酒店。
+                    </p>
                     <p>打车：北京站至北京望京凯悦酒店，30 分钟路程，费用约 40 元。</p>
 
                 </div>
@@ -279,8 +305,10 @@ DevCon 2021
     <section class="devcon2021-signup">
         <div class="sign-up">
             <div class="btn-wrap">
-            <p>立即报名参与 PingCAP DevCon 2021</p>
-                <a href="https://9432153690779.huodongxing.com/event/3601574266800" target="_blank"><div class="button signup-btn">立即报名</div></a>
+                <p>立即报名参与 PingCAP DevCon 2021</p>
+                <a href="http://www.huodongxing.com/event/3601574266800?qd=website" target="_blank">
+                    <div class="button signup-btn">立即报名</div>
+                </a>
             </div>
             <img class="el1" src="/images/community/devcon2021/bg-el-2.svg" />
             <img class="el2" src="/images/community/devcon2021/bg-el-3.svg" />
@@ -292,18 +320,22 @@ DevCon 2021
         <div class="container">
             <h2 id="notice" class="section-title">往期回顾</h2>
             <div class="review-list">
-                <a href="/community-cn/devcon2020/" class="item"><img src="/images/community/devcon2021/review-devcon2020.png" /></a>
-                <a href="/community-cn/devcon2019/" class="item"><img src="/images/community/devcon2021/review-devcon2019.png" /></a>
-                <a href="/community-cn/devcon2018/" class="item"><img src="/images/community/devcon2021/review-devcon2018.png" /></a>
+                <a href="/community-cn/devcon2020/" class="item"><img
+                        src="/images/community/devcon2021/review-devcon2020.png" /></a>
+                <a href="/community-cn/devcon2019/" class="item"><img
+                        src="/images/community/devcon2021/review-devcon2019.png" /></a>
+                <a href="/community-cn/devcon2018/" class="item"><img
+                        src="/images/community/devcon2021/review-devcon2018.png" /></a>
             </div>
         </div>
     </section>
 
-    <div class="signup-code pc"></div>
+    <a href="http://www.huodongxing.com/event/3601574266800?qd=website" target="_blank
+    ">
+        <div class="signup-code pc"></div>
+    </a>
     <div class="signup-code mobile">
-        <p id="signup">立即报名</p>
-        <img class="close-icon" src="/images/community/devcon2021/close-icon.svg" />
-        <img class="qrcode" src="/images/community/devcon2021/qrcode.svg" />
+        <a href="http://www.huodongxing.com/event/3601574266800?qd=website" target="_blank">立即报名</a>
     </div>
 </div>
 {{- end -}}
