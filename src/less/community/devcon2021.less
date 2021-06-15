@@ -92,6 +92,7 @@
     }
 
     .devcon2021-hero {
+        position: relative;
         padding: 8rem 0 3rem;
         background-color: @theme-blue;
         text-align: center;
@@ -136,6 +137,58 @@
             }
 
 
+        }
+
+        .bg-el-1,
+        .bg-el-2,
+        .bg-el-3,
+        .bg-el-4 {
+            position: absolute;
+
+            @media @mobile {
+                display: none;
+            }
+        }
+
+        .bg-el-1,
+        .bg-el-4 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            left: 8rem;
+            top: 5rem;
+            transform: rotate(-45deg);
+            background: url('/images/community/devcon2021/bg-el-2.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-2 {
+            height: 200px;
+            width: 200px;
+            left: -100px;
+            bottom: 5rem;
+            background: url('/images/community/devcon2021/bg-el-3.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-3 {
+            height: 200px;
+            width: 200px;
+            right: -100px;
+            top: 5rem;
+            transform: rotate(90deg);
+            background: url('/images/community/devcon2021/bg-el-1.svg') no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .bg-el-4 {
+            bottom: 5rem;
+            top: auto;
+            right: 8rem;
+            left: auto;
         }
     }
 
@@ -530,6 +583,12 @@
                     }
                 }
             }
+        }
+
+        .more-tutor {
+            padding-bottom: 3rem;
+            font-size: @P1;
+            color: @F1;
         }
     }
 
