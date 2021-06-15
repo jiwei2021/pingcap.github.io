@@ -5,7 +5,7 @@
         "time": "9:30 - 12:00",
         "venues": [
           {
-            "name": "Keynote —— 开放、连接、预见",
+            "name": "开放、连接、预见 主题演讲",
             "id": "day1-1",
             "icon": "/images/community/devcon2021/day1-icon1.svg",
             "main": true
@@ -16,17 +16,17 @@
         "time": "13:00 - 18:20",
         "venues": [
           {
-            "name": "业务敏捷与云原生 专题论坛",
+            "name": "业务敏捷 分论坛",
             "id": "day1-2",
             "icon": "/images/community/devcon2021/day1-icon2.svg"
           },
           {
-            "name": "实时洞察与业务智能 专题论坛",
+            "name": "实时 HTAP 分论坛",
             "id": "day1-3",
             "icon": "/images/community/devcon2021/day1-icon3.svg"
           },
           {
-            "name": " 数据创新技术与开放生态 专题论坛",
+            "name": "创新生态 分论坛",
             "id": "day1-3",
             "icon": "/images/community/devcon2021/day1-icon4.svg"
           }
