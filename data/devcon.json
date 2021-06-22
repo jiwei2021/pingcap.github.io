@@ -2399,12 +2399,6 @@
       "company": "明势资本"
     },
     {
-      "name": "刘春雷",
-      "avatar": "/images/community/devcon2021/liuchunlei.png",
-      "title": "TiDB 及 DorisDB 项目负责人",
-      "company": "58 同城"
-    },
-    {
       "name": "刘奇",
       "avatar": "/images/community/devcon2021/liuqi.png",
       "title": "创始人兼 CEO",
@@ -2415,6 +2409,12 @@
       "avatar": "/images/community/devcon2021/liuxiangming.png",
       "title": "联合创始人",
       "company": "钛媒体"
+    },
+    {
+      "name": "刘春雷",
+      "avatar": "/images/community/devcon2021/liuchunlei.png",
+      "title": "TiDB 及 DorisDB 项目负责人",
+      "company": "58 同城"
     },
     {
       "name": "Reynold Xin",
