@@ -2405,6 +2405,7 @@
       "company": "PingCAP"
     },
     {
+<<<<<<< HEAD
       "name": "刘湘明",
       "avatar": "/images/community/devcon2021/liuxiangming.png",
       "title": "联合创始人",
@@ -2426,6 +2427,11 @@
       "name": "申砾",
       "avatar": "/images/community/devcon2021/shenli.png",
       "title": "国际业务总经理",
+=======
+      "name": "黄东旭",
+      "avatar": "/images/community/devcon2021/huangdongxu.png",
+      "title": "联合创始人兼 CTO",
+>>>>>>> yini/devcon2021
       "company": "PingCAP"
     },
     {
@@ -2451,6 +2457,60 @@
       "avatar": "/images/community/devcon2021/zhuwei.png",
       "title": "中国区商业化总经理",
       "company": "PingCAP"
+    },
+    {
+      "name": "申砾",
+      "avatar": "/images/community/devcon2021/shenli.png",
+      "title": "国际业务总经理",
+      "company": "PingCAP"
+    },
+    {
+      "name": "何宝宏",
+      "avatar": "/images/community/devcon2021/hebaohong.png",
+      "title": "云计算与大数据研究所所长",
+      "company": "中国信息通信研究院"
+    },
+    {
+      "name": "黄明明",
+      "avatar": "/images/community/devcon2021/huangmingming.png",
+      "title": "创始合伙人",
+      "company": "明势资本"
+    },
+    {
+      "name": "刘湘明",
+      "avatar": "/images/community/devcon2021/liuxiangming.png",
+      "title": "联合创始人",
+      "company": "钛媒体"
+    },
+    {
+      "name": "刘春雷",
+      "avatar": "/images/community/devcon2021/liuchunlei.png",
+      "title": "TiDB 及 DorisDB 项目负责人",
+      "company": "58 同城"
+    },
+    {
+      "name": "Reynold Xin",
+      "avatar": "/images/community/devcon2021/reynoldxin.png",
+      "title": "Co-founder & Chief Architect",
+      "company": "Databricks"
+    },
+    {
+      "name": "沈旸",
+      "avatar": "/images/community/devcon2021/shenyang.png",
+      "title": "CIO",
+      "company": "神州数码集团股份有限公司"
+    },
+    {
+      "name": "孙晓光",
+      "avatar": "/images/community/devcon2021/sunxiaoguang.png",
+      "title": "知乎基础研发架构师，TiDB 社区 TOC 主席, TiKV Maintainer",
+      "company": "知乎"
+    },
+    {
+      "name": "王志广",
+      "avatar": "/images/community/devcon2021/wangzhiguang.png",
+      "title": "Bilibili DBA，TUG 内容组 Co-leader",
+      "company": "Bilibili"
     }
   ],
 
