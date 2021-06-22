@@ -1,16 +1,23 @@
 {{ $schedule := .schedule }}
 {{ $date := .date}}
 {{ $isCn := .isCn }}
+{{ $isPreDay := .isPreDay }}
 
 {{- range $idx, $i := $schedule -}}
 <div class="schedule {{ if eq $date "day2" }}hide-schedule {{ end }}{{ $date }}"
     id="{{ replace (replace $i.name  "/" "-" ) " " "-" }}">
+    {{ if $i.name }}
     <div class="venue-title">{{ $i.name }}</div>
+    {{ end }}
+    {{ if $i.desc }}
+    <div class="venue-desc">{{ $i.desc }}</div>
+    {{ end }}
+    {{ if $i.schedules }}
     <table class="schedule-table">
         <tr class="head">
             <td>{{if $isCn }}时间{{else}}Time{{end}}</td>
-            <td>{{if $isCn }}议题{{else}}Topic{{end}}</td>
-            <td>{{if $isCn }}演讲嘉宾{{else}}Speaker{{end}}</td>
+            <td>{{if $isCn }}{{if $isPreDay}}日程{{else}}议题{{end}}{{else}}Topic{{end}}</td>
+            <td>{{if $isCn }}{{if $isPreDay}}{{else}}演讲嘉宾{{end}}{{else}}Speaker{{end}}</td>
             <td></td>
         </tr>
         {{- range $idx2, $j := $i.schedules -}}
@@ -59,5 +66,6 @@
         {{- end -}}
         {{- end -}}
     </table>
+    {{ end }}
 </div>
 {{- end -}}
