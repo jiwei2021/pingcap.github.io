@@ -17,7 +17,7 @@
 @H4: 18px;
 @P1: 16px;
 @P2: 14px;
-@LH: 1.7;
+@LH: 1.75;
 
 .h-center {
     left: 50%;
@@ -455,6 +455,7 @@
                 .venue-desc {
                     font-size: @P1;
                     padding-top: 1rem;
+                    line-height: @LH;
 
                     @media @mobile {
                         font-size: @P2;
@@ -491,6 +492,10 @@
                 td {
                     padding: 12px 10px 12px 2rem;
                     border: none;
+
+                    @media @mobile {
+                        padding: 12px 10px;
+                    }
                 }
 
                 td:nth-child(1) {
@@ -650,8 +655,8 @@
             justify-content: space-around;
 
             img {
-                width: 200px;
-                height: 100%;
+                width: auto;
+                height: 120px;
                 padding: 1rem;
             }
         }

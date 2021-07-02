@@ -2960,11 +2960,57 @@
     "/images/community/devcon2020/sponsors/it168.png",
     "/images/community/devcon2020/sponsors/motianlun.png"
   ],
+  "support_meida2021_gold": [
+    {
+      "img": "/images/community/devcon2021/logo-action.png",
+      "link": "https://www.actionsky.com/"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-yunqi.png",
+      "link": "www.yunqi.vc"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-future-capital.png",
+      "link": "https://www.future-cap.com"
+    }
+  ],
+  "support_meida2021_silver": [
+    {
+      "img": "/images/community/devcon2021/logo-ggv.png",
+      "link": "https://www.ggvchina.com"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-suse.png",
+      "link": "https://www.suse.com"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-showmebug.png",
+      "link": "https://www.showmebug.com/"
+    }
+  ],
+  "support_meida2021_special": [
+    {
+      "img": "/images/community/devcon2021/logo-huodongxing.png",
+      "link": "https://www.huodongxing.com/"
+    }
+  ],
   "support_meida2021": [
-    "/images/community/devcon2021/logo-ggv.png",
-    "/images/community/devcon2021/logo-future-capital.png",
-    "/images/community/devcon2021/logo-suse.png",
-    "/images/community/devcon2021/logo-showmebug.png"
+    {
+      "img": "/images/community/devcon2021/logo-infoq.png",
+      "link": "https://www.infoq.cn/"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-segmentfault.png",
+      "link": "https://segmentfault.com/"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-oschina.png",
+      "link": "https://www.oschina.net/"
+    },
+    {
+      "img": "/images/community/devcon2021/logo-juejin.png",
+      "link": "https://juejin.cn/"
+    }
   ],
   "instructors_2019": [
     {
