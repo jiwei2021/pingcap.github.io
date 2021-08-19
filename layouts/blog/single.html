@@ -15,10 +15,10 @@
     <div class="blog">
         <div class="container">
             {{- if and (isset .Params "category") (eq .Params.category "case") -}}
-                {{- partial "archives/sticky-tree.html" (dict "tree" .Site.Data.cases_cn_toc "title" "用户案例") -}}
+                {{- partial "archives/sticky-tree.html" (dict "tree" .Site.Data.cases_toc "title" "用户案例") -}}
             {{- else -}}
-                {{- $posts := where (where (where (where (where .Site.Pages "Section" "blog-cn") ".Params.title" "!=" nil) ".Params.category" "!=" "case") ".Params.category" "!=" "community reading") ".Params.category" "!=" "devcon" -}}
-                {{- partial "navs/tags-nav.html" (dict "type" "single" "title" "热门标签" "posts" $posts "rss" "/blog-cn/index.xml" "prefixHref" "/blog-cn/" "global" .) -}}
+                {{- $posts := where (where (where (where (where .Site.Pages "Section" "blog") ".Params.title" "!=" nil) ".Params.category" "!=" "case") ".Params.category" "!=" "community reading") ".Params.category" "!=" "devcon" -}}
+                {{- partial "navs/tags-nav.html" (dict "type" "single" "title" "热门标签" "posts" $posts "rss" "/blog/index.xml" "prefixHref" "/blog/" "global" .) -}}
             {{- end -}}
             <div class="archive">
                 <div class="content markdown-body">

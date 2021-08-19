@@ -1,6 +1,6 @@
 ---
-type: page
-layout: cases-cn
+type: case
+layout: list
 title: 案例
 image: /images/pingcap-opengraph.jpg
 summary: >-

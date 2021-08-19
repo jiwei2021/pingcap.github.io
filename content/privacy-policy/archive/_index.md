@@ -1,5 +1,5 @@
 ---
-type: zh/privacy-policy
+type: privacy-policy
 layout: list
 title: Privacy Policy
 ---
@@ -14,4 +14,4 @@ title: Privacy Policy
     2. 将此隐私政策限制于在中华人民共和国使用我们的产品或在中华人民共和国境内访问我们的网站。
     3. 隐私声明更名为隐私政策。
 
-- [2020 年 6 月 1 日生效的隐私政策（隐私声明）](/zh/privacy-policy/archive/20200601-20210401)
+- [2020 年 6 月 1 日生效的隐私政策（隐私声明）](/privacy-policy/archive/20200601-20210401)

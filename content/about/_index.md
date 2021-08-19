@@ -1,5 +1,5 @@
 ---
-type: about-cn
+type: about
 layout: list
 title: 关于
 image: /images/pingcap-opengraph.jpg

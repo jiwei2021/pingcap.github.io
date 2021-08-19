@@ -8,7 +8,7 @@
     {{- block "headTpl" . -}}{{- end -}}
     {{- $data_i18_cn := $.Scratch.Get "data_i18_cn" -}}
     {{- $no_footer := $.Scratch.Get "no_footer" -}}
-    <title>{{ block "title" . }}{{- .Title -}}{{ end }} |&nbsp;{{- if and $data_i18_cn (ne ($.Scratch.Get "nav_active") "docs") -}}PingCAP {{- else -}} {{ $.Scratch.Get "metaTitle" }} {{- end -}}
+    <title>{{ block "title" . }}{{- .Title -}}{{ end }} |&nbsp; PingCAP
     </title>
     {{- partial "head/meta-seo" . -}}
     {{- partial "head/preload-assets" . -}}
