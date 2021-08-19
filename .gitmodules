@@ -2,4 +2,3 @@ submodule "content/meetup"]
 	path = content/meetup
 	url = https://github.com/pingcap/meetup
 	shallowed = true
-
