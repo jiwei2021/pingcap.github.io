@@ -14,13 +14,6 @@
     "date": "2020-12-22"
   },
   {
-    "name": "36 氪",
-    "title": "开源商业化得到验证，「PingCAP」 完成 D 轮 2.7 亿美元融资",
-    "logo": "/images/news/36krlogo.png",
-    "link": "https://36kr.com/p/970662046197253",
-    "date": "2020-11-17"
-  },
-  {
     "name": "IT168",
     "title": "北京银行和平凯星辰获得 2020 年度亚洲银行家大奖",
     "logo": "/images/news/it168-logo.png",
@@ -49,27 +42,6 @@
     "date": "2020-04-07"
   },
   {
-    "name": "Go中国",
-    "title": "PingCAP 刘奇：成就了世界级产品梦想的 Gopher",
-    "logo": "https://download.pingcap.com/images/news/go-china.png",
-    "link": "https://www.sohu.com/a/368235477_657921",
-    "date": "2020-01-21"
-  },
-  {
-    "name": "清科集团",
-    "title": "PingCAP 入选 2019 中国最具投资价值企业风云榜 50 强",
-    "logo": "https://download.pingcap.com/images/news/qingkejituan.jpeg",
-    "link": "https://news.pedaily.cn/201910/447492.shtml",
-    "date": "2019-10-18"
-  },
-  {
-    "name": "财富",
-    "title": "刘奇入选“2019 年中国 40 位 40 岁以下的商界精英”",
-    "logo": "https://download.pingcap.com/images/news/caifulogo.png",
-    "link": "http://www.fortunechina.com/rankings/c/2019-09/19/content_346048.htm",
-    "date": "2019-09-19"
-  },
-  {
     "name": "InfoQ",
     "title": "PingCAP 唐刘：如何利用混沌工程打造健壮的分布式系统？",
     "logo": "/images/news/infoqlogo.png",
@@ -84,25 +56,11 @@
     "date": "2019-06-29"
   },
   {
-    "name": "InfoQ",
-    "title": "势高，则围广：TiDB 的架构演进哲学",
-    "logo": "/images/news/infoqlogo.png",
-    "link": "https://www.infoq.cn/article/Qw_8ubZFgtQlcZmZHBlA",
-    "date": "2019-06-03"
-  },
-  {
     "name": "开源中国",
     "title": "PingCAP 宣布 TiDB Binlog 组件正式开源",
     "logo": "/images/news/oschinalogo.jpg",
     "link": "https://www.oschina.net/news/106479/tidb-binlog-open-source",
     "date": "2019-05-06"
-  },
-  {
-    "name": "极客公园",
-    "title": "对话 CTO〡和 PingCAP CTO 黄东旭聊开源数据库新蓝海",
-    "logo": "/images/news/geekpark-logo.png",
-    "link": "https://mp.weixin.qq.com/s/ufAdqUbgjhGhG59i4-UbeA",
-    "date": "2019-02-16"
   },
   {
     "name": "InfoQ",
@@ -119,20 +77,6 @@
     "date": "2018-10-26"
   },
   {
-    "name": "极客公园",
-    "title": "数据库市场迎来拐点了么？创业公司 PingCAP 想用开源的方式重塑一套「底层建筑」 ",
-    "logo": "/images/news/geekpark-logo.png",
-    "link": "http://www.geekpark.net/news/232929",
-    "date": "2018-09-17"
-  },
-  {
-    "name": "腾讯科技",
-    "title": "PingCAP 获 C 轮 5000 万美元融资 打造融合型通用数据库",
-    "logo": "/images/news/techqq-logo.jpeg",
-    "link": "http://tech.qq.com/a/20180912/049325.htm",
-    "date": "2018-09-12"
-  },
-  {
     "name": "搜狐",
     "title": "PingCAP 与京东云联合发布分布式云数据库 Cloud-TiDB",
     "logo": "/images/news/sohu.com-logo.jpg",
@@ -145,13 +89,6 @@
     "logo": "/images/news/wot-logo.png",
     "link": "http://bigdata.51cto.com/art/201806/576992.htm",
     "date": "2018-06-25"
-  },
-  {
-    "name": "爱分析",
-    "title": "爱分析访谈 | PingCAP 刘奇：数据库市场呈现多样化趋势，20% 传统数据库在未来两年会被替代",
-    "logo": "/images/news/ifenxi.png",
-    "link": "http://ifenxi.com/archives/2831",
-    "date": "2018-04-20"
   },
   {
     "name": "开源中国",
@@ -189,32 +126,11 @@
     "date": "2017-08-22"
   },
   {
-    "name": "极客公园",
-    "title": "2017 中国最具投资价值 TOP 50 公司榜单",
-    "logo": "/images/news/geekparklogo.png",
-    "link": "http://www.geekpark.net/news/221014",
-    "date": "2017-08-06"
-  },
-  {
     "name": "搜狐科技",
     "title": "GTLC人物 | PingCAP CEO 刘奇：如何聚集精英技术人才",
     "logo": "/images/news/itsohulogo.png",
     "link": "http://www.sohu.com/a/150821471_256833",
     "date": "2017-06-21"
-  },
-  {
-    "name": "腾讯科技",
-    "title": "分布式关系型数据库公司 PingCAP 完成 1500 万美元 B 轮融资",
-    "logo": "/images/news/techqqlogo.png",
-    "link": "http://tech.qq.com/a/20170613/012550.htm",
-    "date": "2017-6-13"
-  },
-  {
-    "name": "铅笔道",
-    "title": "B 轮融资 1500 万美元 PingCAP 开源数据库对标谷歌 Spanner",
-    "logo": "/images/news/pencilnewslogo.png",
-    "link": "https://www.pencilnews.cn/p/14302.html",
-    "date": "2017-6-13"
   },
   {
     "name": "IT168",
@@ -266,13 +182,6 @@
     "date": "2017-4-17"
   },
   {
-    "name": "IT168",
-    "title": "Cloud + TiDB：NewSQL 的云化之路",
-    "logo": "/images/news/csdnlogo.png",
-    "link": "https://www.csdn.net/article/a/2017-03-31/15821827",
-    "date": "2017-03-31"
-  },
-  {
     "name": "程序员杂志",
     "title": "一个架构的演进和开发哲学",
     "logo": "/images/news/programmerlogo.png",
@@ -284,13 +193,6 @@
     "title": "创始人复盘：为什么 TiDB 会再上 HackerNews 首页 top10",
     "logo": "/images/news/infoqlogo.png",
     "link": "https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247486318&amp;idx=1&amp;sn=80507a690ec850a33cba46be9bc81b2c&source=41#wechat_redirect",
-    "date": "2017-01-18"
-  },
-  {
-    "name": "CSDN",
-    "title": "2017 分布式数据库开门红，TiDB 燃爆海外技术圈",
-    "logo": "/images/news/csdnlogo.png",
-    "link": "https://www.csdn.net/article/a/2017-01-18/15843403",
     "date": "2017-01-18"
   },
   {
@@ -357,20 +259,6 @@
     "date": "2016-09-20"
   },
   {
-    "name": "CSDN",
-    "title": "反哺社区, PingCAP 巡讲硅谷展示技术实力",
-    "logo": "/images/news/csdnlogo.png",
-    "link": "http://www.csdn.net/article/a/2016-09-19/15816705",
-    "date": "2016-09-19"
-  },
-  {
-    "name": "开源中国",
-    "title": "源创专访 | PingCAP 唐刘：重度开源爱好者眼中的\"开源精神\"",
-    "logo": "/images/news/oschinalogo.jpg",
-    "link": "https://my.oschina.net/editorial-story/blog/748177",
-    "date": "2016-09-14"
-  },
-  {
     "name": "C114",
     "title": "PingCAP 黄东旭：运营商越来越相信开源技术",
     "logo": "/images/news/c114logo.png",
@@ -390,13 +278,6 @@
     "logo": "/images/news/cdalogo.png",
     "link": "https://mp.weixin.qq.com/s?__biz=MzA3OTAxMDQzNQ==&mid=2650608608&idx=2&sn=4ffac6876ed6158320e54d3c5db950e1&scene=1&srcid=0831kPZVPpwEfFPPSpcJaOEa&key=7b81aac53bd2393ddd3a6410e440bc23207f02f80844071471e8004d6fbdee276cc301a8b2e60a8b4bc9e08ec4106bcd&ascene=0&uin=MzA2MDUzNDc1&devicetype=iMac+MacBook8%2C1+OSX+OSX+10.11.6+build(15G31)&version=11020201&pass_ticket=pamyEx01dXibppggLZBVwQbAI8Rim7U9yyxBHre5D89Tp0MElTInEPRymVo0cX2%2F",
     "date": "2016-08-31"
-  },
-  {
-    "name": "险峰投资",
-    "title": "险峰黑科技 | 三个心怀梦想的大男孩 要用开源分布式数据库开创新的大数据时代",
-    "logo": "/images/news/k2vclogo.png",
-    "link": "http://mp.weixin.qq.com/s?__biz=MzA5NTQ2ODM1NA==&mid=2650770340&idx=1&sn=1996458ef4937172110340b5bc807c1e&scene=1&srcid=0805Jvt6tle8mpfjkadUsIZy&from=groupmessage&isappinstalled=0#wechat_redirect",
-    "date": "2016-08-05"
   },
   {
     "name": "至顶网",
@@ -434,13 +315,6 @@
     "date": "2016-06-27"
   },
   {
-    "name": "开源中国社区",
-    "title": "OSC 大咖说 | 专访 PingCAP 联合创始人、CTO 黄东旭：写代码、玩开源，体会造物的成就感",
-    "logo": "/images/news/oschinalogo.jpg",
-    "link": "http://www.oschina.net/question/2652078_2182038",
-    "date": "2016-06-02"
-  },
-  {
     "name": "36kr",
     "title": "去 IOE 的又一利器，PingCAP 打算创造一款更适合云计算的分布式数据库",
     "logo": "/images/news/36krlogo.png",
@@ -460,12 +334,5 @@
     "logo": "/images/news/it168logo.png",
     "link": "http://tech.it168.com/a2016/0317/2531/000002531740.shtml",
     "date": "2016-03-21"
-  },
-  {
-    "name": "CSDN",
-    "title": "SDCC 讲师专访 | PingCAP 联合创始人兼 CEO 刘奇：好的产品应开源，不闭门造车",
-    "logo": "/images/news/csdnlogo.png",
-    "link": "https://www.csdn.net/article/2015-10-09/2825870-SDCC",
-    "date": "2015-10-09"
   }
 ]
