@@ -4,7 +4,7 @@ layout: list
 title: 隐私政策
 ---
 
-# PingCAP 隐私政策
+# 平凯星辰 隐私政策
 
 **最新更新于 2021 年 4 月 2 日** （[历史版本](/privacy-policy/archive/)）
 
