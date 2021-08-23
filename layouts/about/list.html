@@ -78,8 +78,7 @@
     <div class="container">
         <h2 class="title">企业文化</h2>
         <div class="desc">
-            平凯星辰 是一个年轻开放、崇尚自由的团队，集合了一群充满好奇心、有追求、技艺高超、梦想用科技改变世界的小伙伴。他们每个人都是这个行业的佼佼者，也是 平凯星辰
-            团队最核心的价值。为了更好的追求梦想，我们为每一位小伙伴提供了最自由且舒适的工作环境。
+            平凯星辰是一个年轻开放、崇尚自由的团队，集合了一群充满好奇心、有追求、技艺高超、梦想用科技改变世界的小伙伴。他们每个人都是这个行业的佼佼者，也是平凯星辰团队最核心的价值。为了更好的追求梦想，我们为每一位小伙伴提供了最自由且舒适的工作环境。
         </div>
 
         <div class="details">
@@ -189,32 +188,6 @@
                 </div>
             </div>
         </div>
-        <div class="pc-map">
-            <img src="https://download.pingcap.com/images/about-map.png" alt="Office map" />
-            <div class="m-office m-beijing">
-                <div class='line'></div>
-                <button>北京 Office</button>
-            </div>
-            <div class="m-office m-hangzhou">
-                <div class='line'></div>
-                <button>杭州 Office</button>
-            </div>
-            <div class="m-office m-chengdu">
-                <div class='line'></div>
-                <button>成都 Office</button>
-            </div>
-            <div class="m-office m-shenzhen">
-                <div class='line'></div>
-                <button>深圳 Office</button>
-            </div>
-            <div class="m-office m-guangzhou">
-                <div class='line'></div>
-                <button>广州 Office</button>
-            </div>
-        </div>
-        <div class="mobile-map">
-            <img src="https://download.pingcap.com/images/about-mobile-map.png" alt="Office map" />
-        </div>
     </div>
 </section>
 
@@ -222,7 +195,12 @@
     <div class="container">
         <h2 class="title">更多职位正虚位以待！</h2>
         <div class="floating-ele">
-            <span>建设中</span>
+            <a class="link" href="#" onclick="trackViews('about-cn-join-us-bottom', 'recruit_view')">
+                <button class="round-corner-btn">
+                    <span class="arrow">{{ partial "svgs/icon-right-arrow.svg" (dict "fill" "white" "width" 16 "height" 16 ) }}</span>
+                    <span class="text">建设中</span>
+                </button>
+            </a>
             <img class="ele1" src="/images/svgs/ele1.svg" alt="Background decoration" />
             <img class="ele2" src="/images/svgs/ele2.svg" alt="Background decoration" />
             <img class="ele3" src="/images/svgs/ele3.svg" alt="Background decoration" />
