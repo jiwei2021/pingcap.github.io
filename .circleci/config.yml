@@ -49,10 +49,6 @@ jobs:
     docker:
       - image: circleci/node:8.11.3
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - 'f7:0b:c3:e6:35:00:70:26:40:66:3f:e3:ca:54:33:fa'
-            - '96:82:25:e6:7e:1f:4c:00:33:34:76:0a:e0:b4:ee:dd'
       - checkout
       # Dependencies required for deploy
       # python3-pip for awscli
