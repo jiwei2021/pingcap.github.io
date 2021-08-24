@@ -73,7 +73,7 @@ jobs:
           no_output_timeout: 20m
       - run:
           name: deploy
-          command: rsync -avz --delete dist/ "${XC_USER}@${XC_HOST}:${XC_PATH}";
+          command: rsync -avz --progress --delete dist/ ${XC_USER}@${XC_HOST}:${XC_PATH}
           no_output_timeout: 5m
 
   preview:
