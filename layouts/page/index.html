@@ -11,19 +11,10 @@
 {{- define "main" -}}
     <div class="banner-container">
         <div class="multi_slides_carousel">
-            <div class="swiper-container gallery-top">
-                <div class="swiper-wrapper">
-                    {{- range $idx, $i := .Site.Data.index_cn_carousel_banner.banners -}}
-                        <div class="swiper-slide">
-                            <a href="{{ $i.link }}" {{ if $i.newTab }}target="_blank"{{ end }}>
-                                <img class="moment-img"
-                                src="{{ $i.img }}" alt="{{ $i.alt }}"/>
-                            </a>
-                        </div>
-                    {{- end -}}
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+            {{- range $idx, $i := .Site.Data.index_cn_carousel_banner.banners -}}
+            <img class="moment-img"
+                 src="{{ $i.img }}" alt="{{ $i.alt }}"/>
+            {{- end -}}
         </div>
     </div>
     <section class="homepage-slogan-mask homepage-slogan-mask-cn-mobile">
@@ -40,21 +31,9 @@
                 </a>
             </div>
             <div class="tidb-planet-banner-pc">
-                <div class="multi_slides_carousel">
-                    <div class="swiper-container gallery-top">
-                        <div class="swiper-wrapper">
-                            {{- range $idx, $i := .Site.Data.index_cn_carousel_banner.banners -}}
-                                <div class="swiper-slide">
-                                    <a href="{{ $i.link }}" {{ if $i.newTab }}target="_blank"{{ end }}>
-                                        <img class="moment-img"
-                                        src="{{ $i.img }}" alt="{{ $i.alt }}"/>
-                                    </a>
-                                </div>
-                            {{- end -}}
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+                {{- range $idx, $i := .Site.Data.index_cn_carousel_banner.banners -}}
+                <img class="moment-img" src="{{ $i.img }}" alt="{{ $i.alt }}"/>
+                {{- end -}}
             </div>
         </div>
     </section>
