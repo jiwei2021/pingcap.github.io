@@ -50,6 +50,9 @@ jobs:
       - image: circleci/node:8.11.3
     steps:
       - checkout
+      # Dependencies required for deploy
+      # python3-pip for awscli
+      - run: sudo apt update && sudo apt install rsync python-bs4 python3-pip -y
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
