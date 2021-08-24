@@ -1,1 +1,1 @@
-Sitemap: https://pingcap.com/sitemap.xml
+Sitemap: https://pingcap.com.cn/sitemap.xml
