@@ -1,5 +1,5 @@
 ---
-type: about
+type: page
 layout: news
 title: 新闻报道
 image: /images/pingcap-opengraph.jpg
