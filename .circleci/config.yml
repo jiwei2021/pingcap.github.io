@@ -45,6 +45,30 @@ jobs:
               curl "http://www.google.com/ping?sitemap=https://pingcap.com.cn/sitemap.xml"
             fi
 
+  build-and-deploy-XC:
+    docker:
+      - image: circleci/node:8.11.3
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # Fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: build
+          command: npm run build
+          no_output_timeout: 20m
+      - run:
+          name: deploy
+          command: rsync -avz --delete dist/ "${XC_USER}@${XC_HOST}:${XC_PATH}";
+          no_output_timeout: 5m
+
   preview:
     machine:
       image: ubuntu-1604:201903-01
@@ -64,3 +88,10 @@ workflows:
             branches:
               only:
                 - preview
+  deploy-XC:
+    jobs:
+      - build-and-deploy-XC:
+          filters:
+            branches:
+              only:
+                - XC_Web
