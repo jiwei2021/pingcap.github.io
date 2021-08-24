@@ -73,7 +73,9 @@ jobs:
           no_output_timeout: 20m
       - run:
           name: deploy
-          command: rsync -avz --progress --delete dist/ ${XC_USER}@${XC_HOST}:${XC_PATH}
+          command: |
+            ssh-keyscan "${XC_HOST}" >> ~/.ssh/known_hosts 2>/dev/null;
+            rsync -avz --progress --delete dist/ ${XC_USER}@${XC_HOST}:${XC_PATH}
           no_output_timeout: 5m
 
   preview:
