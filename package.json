@@ -11,7 +11,7 @@
     "clean": "rimraf dist",
     "gen-content": "bash ./scripts/gen-content.sh",
     "lint": "eslint src",
-    "prestart": "npm run clean && export NODE_ENV=development; gulp build",
+    "prestart": "npm run clean && export NODE_ENV=development; gulp build && bash ./scripts/process-docs.sh",
     "start": "gulp server"
   },
   "license": "MIT",
