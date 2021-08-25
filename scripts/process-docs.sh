@@ -18,6 +18,8 @@ replace_dist_html_link() {
           python scripts/convert_html.py $html $repo_name
         elif grep -E 'img src=\"[\.\/]*media\/' $html > /dev/null;then
           python scripts/convert_html.py $html $repo_name
+        elif grep -E 'href=\"https:\/\/pingcap.com\/(blog|cases?)-cn\/' $html > /dev/null;then
+          python scripts/convert_html.py $html $repo_name
         fi
         set -e
       fi

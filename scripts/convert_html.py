@@ -18,7 +18,7 @@ except NameError:
 abs_hyper_link_pattern = re.compile(r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}')
 image_rel_src_pattern = re.compile(r'^[\.\/]*media\/')
 
-pingcap_com_blog_or_case_hyper_link_pattern = re.compile(r'https?:\/\/(www\.)?pingcap.com\/(blog|case)-cn\/([-a-zA-Z0-9@:%._\+~#=]{2,256})')
+pingcap_com_blog_or_case_hyper_link_pattern = re.compile(r'https?:\/\/(www\.)?pingcap.com\/(blog|cases?)-cn\/([-a-zA-Z0-9@:%._\+~#=]{2,256})')
 
 file_path = sys.argv[1]
 folder = sys.argv[2]
