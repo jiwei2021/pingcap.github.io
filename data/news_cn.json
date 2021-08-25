@@ -35,13 +35,6 @@
     "date": "2020-09-04"
   },
   {
-    "name": "infoQ",
-    "title": "TiKV 正式从 CNCF 毕业，旨在为云原生时代构建分布式系统",
-    "logo": "/images/news/infoqlogo.png",
-    "link": "https://www.infoq.cn/article/xUwubxr5OHf3j1VszVo3",
-    "date": "2020-09-03"
-  },
-  {
     "name": "开源中国",
     "title": "聊聊数据库的未来，写在 PingCAP 成立五周年前夕",
     "logo": "/images/news/oschinalogo.jpg",
@@ -77,13 +70,6 @@
     "date": "2018-12-20"
   },
   {
-    "name": "拉姆•查兰管理实践奖",
-    "title": "PingCAP CEO 刘奇获 2018 年度拉姆•查兰管理实践奖",
-    "logo": "/images/news/itbear.jpg",
-    "link": "http://www.itbear.com.cn/html/2018-10/305858.html",
-    "date": "2018-10-26"
-  },
-  {
     "name": "搜狐",
     "title": "PingCAP 与京东云联合发布分布式云数据库 Cloud-TiDB",
     "logo": "/images/news/sohu.com-logo.jpg",
@@ -96,13 +82,6 @@
     "logo": "/images/news/wot-logo.png",
     "link": "http://bigdata.51cto.com/art/201806/576992.htm",
     "date": "2018-06-25"
-  },
-  {
-    "name": "开源中国",
-    "title": "开源访谈 | 黄东旭：“无人区”的探索者，TiDB 的前行之路",
-    "logo": "/images/news/oschinalogo.jpg",
-    "link": "https://www.oschina.net/question/2896879_2270570",
-    "date": "2017-11-13"
   },
   {
     "name": "凤凰网",
@@ -189,13 +168,6 @@
     "date": "2017-4-17"
   },
   {
-    "name": "程序员杂志",
-    "title": "一个架构的演进和开发哲学",
-    "logo": "/images/news/programmerlogo.png",
-    "link": "http://mp.weixin.qq.com/s?__biz=MzI3NDIxNTQyOQ==&mid=2247484474&idx=1&sn=0d9a5ab3beb2783cfca3d3b22a567dfc&chksm=eb162350dc61aa46dfc8156b5b92d404d0785b5dff60bd1e6bca42a60109cf1dc30857f1e811#rd",
-    "date": "2017-2-3"
-  },
-  {
     "name": "InfoQ",
     "title": "创始人复盘：为什么 TiDB 会再上 HackerNews 首页 top10",
     "logo": "/images/news/infoqlogo.png",
@@ -273,13 +245,6 @@
     "date": "2016-09-02"
   },
   {
-    "name": "程序员杂志",
-    "title": "分布式数据库 TiDB 过去现在和未来",
-    "logo": "/images/news/programmerlogo.png",
-    "link": "http://mp.weixin.qq.com/s?__biz=MzI3NDIxNTQyOQ==&mid=2247484031&idx=2&sn=cdaa13566f10be52e90581e7a33354eb&scene=19#wechat_redirect",
-    "date": "2016-09 刊"
-  },
-  {
     "name": "经管之家 CDA",
     "title": "专访 | PingCAP 黄东旭：我们诞生在中国，但玩出了世界级技术",
     "logo": "/images/news/cdalogo.png",
@@ -327,13 +292,6 @@
     "logo": "/images/news/36krlogo.png",
     "link": "http://36kr.com/p/5047514.html",
     "date": "2016-05-29"
-  },
-  {
-    "name": "DBAplus 社群",
-    "title": "Codis 作者首度揭秘TiKV事务模型，Google Spanner 开源实现！",
-    "logo": "/images/news/dbapluslogo.png",
-    "link": "http://dbaplus.cn/news-21-439-1.html",
-    "date": "2016-05-20"
   },
   {
     "name": "IT168",
