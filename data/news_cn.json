@@ -7,13 +7,6 @@
     "date": "2021-08-24"
   },
   {
-    "name": "凤凰网",
-    "title": "北京市委书记蔡奇调研 PingCAP 立足自主研发和开源战略，助推产业数字化转型",
-    "logo": "/images/news/ifeng-logo.png",
-    "link": "http://biz.ifeng.com/c/84tlw0fD9DG",
-    "date": "2021-03-25"
-  },
-  {
     "name": "金融界",
     "title": "平凯星辰 (PingCAP) 获评《金融电子化》2020 年度金融科技产品创新突出贡献奖",
     "logo": "/images/news/jinrongjie-logo.jpg",
@@ -28,25 +21,11 @@
     "date": "2020-09-14"
   },
   {
-    "name": "WOT",
-    "title": "PingCAP CTO 黄东旭：TiDB 数据库的四大应用场景分析",
-    "logo": "/images/news/wot-logo.png",
-    "link": "http://bigdata.51cto.com/art/201806/576992.htm",
-    "date": "2018-06-25"
-  },
-  {
     "name": "凤凰网",
     "title": "易观 OLAP 算法大赛结果揭晓，开源组黑马放大招！",
     "logo": "/images/news/techifenglogo.png",
     "link": "http://tech.ifeng.com/a/20171031/44738019_0.shtml",
     "date": "2017-10-31"
-  },
-  {
-    "name": "极客公园",
-    "title": "PingCAP 与腾讯云达成合作，HTAP 数据库 TiDB 现开放内测",
-    "logo": "/images/news/geekparklogo.png",
-    "link": "http://www.geekpark.net/news/222933",
-    "date": "2017-10-13"
   },
   {
     "name": "InfoQ",
@@ -112,24 +91,10 @@
     "date": "2016-10-20"
   },
   {
-    "name": "CTi 论坛",
-    "title": "PingCAP 携 TiDB 亮相 2016 中国国际信息通信展",
-    "logo": "/images/news/ctiforumlogo.png",
-    "link": "http://www.ctiforum.com/news/guonei/493746.html",
-    "date": "2016-09-20"
-  },
-  {
     "name": "InfoQ",
     "title": "云时代数据库的核心特点",
     "logo": "/images/news/infoqlogo.png",
     "link": "http://www.sohu.com/a/108190159_355140",
     "date": "2016-07-21"
-  },
-  {
-    "name": "36kr",
-    "title": "去 IOE 的又一利器，PingCAP 打算创造一款更适合云计算的分布式数据库",
-    "logo": "/images/news/36krlogo.png",
-    "link": "http://36kr.com/p/5047514.html",
-    "date": "2016-05-29"
   }
 ]
