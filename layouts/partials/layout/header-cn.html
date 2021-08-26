@@ -14,19 +14,12 @@
                             <a class="header-dropdown-item" href="/blog/">博客</a>
                             <a class="header-dropdown-item" href="https://learn.pingcap.com">培训中心</a>
                         </div>
-<!--                        <a class="header-doc-nav" href="https://docs.pingcap.com/zh" target="_blank">文档</a>-->
                     </li>
                     <li {{ if eq $nav_active "news"}}class="sel" {{end}}><a href="/news">新闻报道</a></li>
                     <li {{ if eq $nav_active "about"}}class="sel" {{end}}><a href="/about">关于</a></li>
                     <li {{ if eq $nav_active "download"}}class="sel" {{end}}><a href="https://wenjuan.feishu.cn/m/cfm?t=sfjLeEoRJ5ui-23q1">试用申请</a></li>
                     <li><a class="link-download" href="/about/#contact-us">联系我们</a></li>
                 </ul>
-            </div>
-            <div class="global-search">
-                {{ $search_doc_version := index (findRE "(v\\d+\\.\\d+|dev|stable)" .RelPermalink) 0 }}
-                {{ $docs_type := index (findRE "(/tidb-in-kubernetes/|/tidb-data-migration/)" .RelPermalink) 0 }}
-                {{ $search_doc_version := default "stable" $search_doc_version }}
-                {{ partial "layout/search.html" (dict "global" . "search_doc_version" $search_doc_version "lang" "cn" "docs_type" $docs_type) }}
             </div>
         </div>
         <div class="nav-btn nav-slider">
