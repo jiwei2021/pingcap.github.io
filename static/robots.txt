@@ -1,1 +1,1 @@
-Sitemap: https://pingcap.com.cn/sitemap.xml
+User-agent: * Disallow: /
