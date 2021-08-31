@@ -27,7 +27,7 @@ default_version = ''
 if file_path == "dist/docs/index.html" or file_path == "dist/docs-cn/index.html":
     default_version = '/stable'
 
-with open(file_path, 'r') as f:
+with open(file_path, 'r', encoding='utf-8') as f:
     soup = BeautifulSoup(f.read(), 'lxml')
 
 for link in soup.find_all('a'):
@@ -61,5 +61,5 @@ for img in soup.find_all('img'):
             img['class'] = 'lazy'
 
 # Write html
-with open(file_path, 'w') as f:
+with open(file_path, 'w', encoding='utf-8') as f:
     f.write(unicode(soup))
