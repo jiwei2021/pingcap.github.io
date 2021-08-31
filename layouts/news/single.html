@@ -1,0 +1,39 @@
+{{- define "headTpl" -}}
+    {{- partial "head/preload-css" (dict "href" "https://download.pingcap.com/style/github-markdown.css") -}}
+    {{- partial "head/preload-css" (dict "href" "/css/doc.css") -}}
+    {{- if and (isset .Params "category") (eq .Params.category "case") -}}
+        {{$.Scratch.Set "data_i18_link" "/success-stories" }}
+        {{$.Scratch.Set "nav_active" "cases"}}
+    {{- else -}}
+        {{$.Scratch.Set "data_i18_link" "/news" }}
+        {{$.Scratch.Set "nav_active" "news"}}
+    {{- end -}}
+    {{$.Scratch.Set "data_i18_cn" true }}
+{{- end -}}
+
+{{- define "main" -}}
+    <div class="blog">
+        <div class="container">
+            <div class="archive">
+                <div class="content markdown-body">
+                    <h1 class="title">{{- .Title -}}</h1>
+                    <ul class="blog-post-meta">
+                        <li class="meta-item">
+                            <img src="/images/svgs/icon-date.svg" alt="Date icon">
+                            {{- .Date.Format "Mon, Jan 2, 2006" -}}
+                        </li>
+                    </ul>
+                    <div class="blog-text">{{- .Content -}}</div>
+                    {{ if .Params.katex }}{{ partial "archives/math.html" . }}{{ end }}
+                </div>
+                {{- partial "archives/post-share-cn.html" . -}}
+            </div>
+        </div>
+    </div>
+{{- end -}}
+
+{{- define "footJS" -}}
+    <script type="text/javascript" src="/js/vendor/lazyload.min.js"></script>
+    <script type="text/javascript" src="/js/doc.js"></script>
+    <script type="text/javascript" src="/js/anchor.js"></script>
+{{- end -}}

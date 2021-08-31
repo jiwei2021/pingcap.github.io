@@ -27,7 +27,7 @@ replace_dist_html_link() {
   fi
 }
 
-misc_repos=(blog meetup)
+misc_repos=(blog meetup news)
 
 for repo in "${misc_repos[@]}"
 do

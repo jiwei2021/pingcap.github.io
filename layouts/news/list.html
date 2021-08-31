@@ -1,17 +1,50 @@
 {{- define "headTpl" -}}
-    {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
+    {{- partial "head/preload-css" (dict "href" "/css/hero-new.css") -}}
+    {{- partial "head/preload-css" (dict "href" "/css/blog.css") -}}
+    {{- partial "head/preload-css" (dict "href" "/css/news.css") -}}
     {{$.Scratch.Set "nav_active" "news"}}
     {{$.Scratch.Set "data_i18_cn" true }}
-    {{$.Scratch.Set "data_i18_link" "/news" }}
+    {{$.Scratch.Set "data_i18_link" "/news/" }}
 {{- end -}}
 
 {{- define "main" -}}
     {{ $title := "新闻报道" }}
     {{ $image := "/images/news/pingcap-news.svg" }}
+    {{- $posts := where (where .Site.Pages "Section" "news") ".Params.title" "!=" nil -}}
     <div class="news">
         {{ partial "layout/hero-new.html" (dict "title" $title "image" $image) }}
         <div class="container">
-            {{- partial "news/list.html" (dict "posts" .Site.Data.news_cn "global" .) -}}
+            <div class="list article-list">
+                {{- range ($posts.ByDate.Reverse) -}}
+                <div class="article" data-tag="{{ range .Params.tags }}{{ replace . " " "-" }} {{ end }}">
+                    <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                    <ul class="blog-post-meta">
+                        <li class="meta-item">
+                            <img src="/images/svgs/icon-date.svg" alt="Date icon" />
+                            {{- .Date.Format "2006-01-02" -}}
+                        </li>
+                        <li class="meta-item">
+                            <div>
+                                {{- if isset .Params "tags" -}}
+                                {{ $len := len .Params.tags }}
+                                {{- range $idx, $i := .Params.tags -}}
+                                {{- $tag := replace $i " " "-" -}}
+                                <a href="#{{ $tag | urlize }}" class="link anchor-tag" data-tag="{{$tag}}">{{ $tag }}</a>
+                                {{- if lt $idx (sub $len 1) -}}|{{- end -}}
+                                {{- end -}}
+                                {{- end -}}
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="{{ .RelPermalink }}">
+                        <div class="brief">
+                            <p>{{- .Params.summary -}}</p>
+                        </div>
+                    </a>
+                    <div class="article_divider"></div>
+                </div>
+                {{- end -}}
+            </div>
         </div>
     </div>
 {{- end -}}
