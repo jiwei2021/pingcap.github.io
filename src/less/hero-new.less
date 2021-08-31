@@ -1,0 +1,56 @@
+// import global variables
+@import "./variables.less";
+
+.hero_new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 326px;
+  background-image: url("/images/hero-background.svg");
+  background-size: cover;
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: @pcMaxWidth;
+
+    @media (min-width: 960px) {
+      flex-direction: row;
+    }
+    @media (max-width: 961px) {
+      flex-direction: column;
+      //height: 160px;
+      &_start {
+        text-align: center;
+      }
+      &_end {
+        display: none;
+      }
+    }
+
+    &_start {
+      &_title {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+      &_subtitle {
+        margin-top: 1rem;
+        color: white;
+        font-size: .75rem;
+        font-weight: 400;
+      }
+    }
+    &_end {
+
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero__heading {
+    font-size: @heroSTitleSize;
+  }
+}

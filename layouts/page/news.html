@@ -1,13 +1,14 @@
 {{- define "headTpl" -}}
     {{$.Scratch.Set "data_i18_cn" true }}
     {{$.Scratch.Set "data_i18_link" "/news" }}
-    {{- partial "head/preload-css" (dict "href" "/css/cases.css") -}}
+    {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
 {{- end -}}
 
 {{- define "main" -}}
-    {{ $heading := "新闻报道" }}
+    {{ $title := "新闻报道" }}
+    {{ $image := "/images/news/pingcap-news.svg" }}
     <div class="news">
-        {{ partial "layout/hero.html" (dict "heading" $heading) }}
+        {{ partial "layout/hero-new.html" (dict "title" $title "image" $image) }}
         <div class="container">
             {{- partial "news/list.html" (dict "posts" .Site.Data.news_cn "global" .) -}}
         </div>

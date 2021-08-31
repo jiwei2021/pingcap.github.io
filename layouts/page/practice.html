@@ -1,34 +1,24 @@
 {{- define "headTpl" -}}
+{{- partial "head/preload-css" (dict "href" "https://download.pingcap.com/style/gridtab.min.css") -}}
     {{- partial "head/preload-css" (dict "href" "https://download.pingcap.com/style/gridtab.min.css") -}}
-    {{- partial "head/preload-css" (dict "href" "/css/case.css") -}}
-    {{$.Scratch.Set "nav_active" "case"}}
+    {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
+    {{$.Scratch.Set "nav_active" "practice"}}
     {{$.Scratch.Set "data_i18_link" "/success-stories" }}
     {{$.Scratch.Set "data_i18_cn" true }}
 {{- end -}}
 
 {{- define "main" -}}
-    {{ $title := "成功案例" }}
-    {{ $subtitle := "TiDB 企业版正在为众多企业客户提供稳定高效、安全可靠、开放兼容的新型数据基础设施服务" }}
-    {{ $image := "/images/case/pingcap-case.svg" }}
-    <div class="case">
+    {{ $title := "用户实践" }}
+    {{ $subtitle := "TiDB 现已被 1500 多家不同行业的领先企业应用在实际生产环境" }}
+    {{ $image := "/images/practice/pingcap-practice.svg" }}
+    <div class="practice">
         {{ partial "layout/hero-new.html" (dict "title" $title "subtitle" $subtitle "image" $image) }}
-        <div class="container">
-            <div class='case_list'>
-                <div class='case_list_title'>
-                    金融行业
-                </div>
-                <div class='case_list_image'>
-                    <img class=" case_list_image_pc" src="/images/case/case-finance-pc.png" alt="金融行业">
-                    <img class="case_list_image_mobile" src="/images/case/case-finance-mobile.png" alt="金融行业">
-                </div>
-                <div class='case_list_title'>
-                    传统行业
-                </div>
-                <div class='case_list_image'>
-                    <img class="case_list_image_pc" src="/images/case/case-tradition-pc.png" alt="传统行业">
-                    <img class="case_list_image_mobile" src="/images/case/case-tradition-mobile.png" alt="传统行业">
-                </div>
-            </div>
+        {{ $posts := where (where (where .Site.Pages "Section" "blog-cn") ".Params.title" "!=" nil) ".Params.category" "==" "practice" }}
+        <div id="cases-tabs">
+            {{- range $index, $toc := .Site.Data.cases_cn_toc -}}
+            <dt class="tab tab-{{ $index }}">{{- .name -}}</dt>
+            <dd>{{- partial "cases/tab-panel.html" (dict "posts" $posts "name" .name "global" .) -}}</dd>
+            {{- end -}}
         </div>
     </div>
 {{- end -}}
@@ -39,7 +29,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             // process grid tabs
-            $('#case-tabs').gridtab({
+            $('#cases-tabs').gridtab({
                 grid: 5,
                 borderWidth: 1,
                 tabPadding: 12,
