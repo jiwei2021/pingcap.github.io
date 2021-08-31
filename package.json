@@ -12,7 +12,9 @@
     "gen-content": "bash ./scripts/gen-content.sh",
     "lint": "eslint src",
     "prestart": "npm run clean && export NODE_ENV=development; gulp build && bash ./scripts/process-docs.sh",
-    "start": "gulp server"
+    "start": "gulp server",
+    "dev1": "git submodule sync && git submodule update --init --remote --recursive && npm run gen-content && export NODE_ENV=production && ./scripts/build-check-err.sh && npm run clean && export NODE_ENV=development && gulp build  && gulp server",
+    "dev": "npm run clean && export NODE_ENV=development && gulp build && gulp server"
   },
   "license": "MIT",
   "dependencies": {

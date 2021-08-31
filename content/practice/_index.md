@@ -1,6 +1,6 @@
 ---
-type: page
-layout: practice
+type: practice
+layout: list
 title: 用户实践
 image: /images/pingcap-opengraph.jpg
 summary: >-

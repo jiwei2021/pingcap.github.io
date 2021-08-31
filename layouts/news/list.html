@@ -1,7 +1,8 @@
 {{- define "headTpl" -}}
+    {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
+    {{$.Scratch.Set "nav_active" "news"}}
     {{$.Scratch.Set "data_i18_cn" true }}
     {{$.Scratch.Set "data_i18_link" "/news" }}
-    {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
 {{- end -}}
 
 {{- define "main" -}}

@@ -1,7 +1,8 @@
 {{- define "headTpl" -}}
+    {{- partial "head/preload-css" (dict "href" "/css/partner.css") -}}
+    {{$.Scratch.Set "nav_active" "partner"}}
     {{$.Scratch.Set "data_i18_cn" true }}
     {{$.Scratch.Set "data_i18_link" "/news" }}
-    {{- partial "head/preload-css" (dict "href" "/css/partner.css") -}}
 {{- end -}}
 
 {{- define "main" -}}
