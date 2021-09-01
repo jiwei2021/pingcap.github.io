@@ -16,8 +16,8 @@
         {{ $posts := where (where (where .Site.Pages "Section" "blog") ".Params.title" "!=" nil) ".Params.category" "==" "case" }}
         <div id="cases-tabs">
             {{- range $index, $toc := .Site.Data.cases_toc -}}
-            <dt class="tab tab-{{ $index }}">{{- .name -}}</dt>
-            <dd>{{- partial "cases/tab-panel.html" (dict "posts" $posts "name" .name "global" .) -}}</dd>
+            <dt class="tab tab-{{ $index }}">{{- .title -}}</dt>
+            <dd>{{- partial "cases/tab-panel.html" (dict "posts" $posts "name" .title "global" .) -}}</dd>
             {{- end -}}
         </div>
     </div>
