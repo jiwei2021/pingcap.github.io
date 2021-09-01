@@ -9,12 +9,6 @@ import sys
 if sys.version_info.major == 3:
     unicode = str
 
-try:
-    reload(sys) # Python 2.7
-    sys.setdefaultencoding('utf-8')
-except NameError:
-    pass
-
 abs_hyper_link_pattern = re.compile(r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}')
 image_rel_src_pattern = re.compile(r'^[\.\/]*media\/')
 
@@ -28,7 +22,7 @@ if file_path == "dist/docs/index.html" or file_path == "dist/docs-cn/index.html"
     default_version = '/stable'
 
 with open(file_path, 'r', encoding='utf-8') as f:
-    soup = BeautifulSoup(f.read(), 'lxml')
+    soup = BeautifulSoup(f.read(), 'html.parser')
 
 for link in soup.find_all('a'):
     href = link['href']
