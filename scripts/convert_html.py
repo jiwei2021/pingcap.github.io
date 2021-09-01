@@ -40,20 +40,19 @@ for img in soup.find_all('img'):
     src = img['src']
 
     if src:
-        if (not abs_hyper_link_pattern.match(src)) and image_rel_src_pattern.match(src):
+        if (not abs_hyper_link_pattern.match(src)):
             _src = re.sub(r'[\.\/]*media\/', '/', src, count=0, flags=0)
-            if (folder == 'blog') or (folder == 'case'):
-                folder = 'blog-cn'
-                _src = 'https://download.pingcap.com.cn/images/' + folder + _src
-            else:
-                _src = "/%s/media%s" % (folder, _src)
+#             if (folder == 'blog') or (folder == 'case'):
+#                 folder = 'blog-cn'
+#                 _src = 'https://download.pingcap.com.cn/images/' + folder + _src
+#             else:
+#                 _src = "/%s/media%s" % (folder, _src)
+            _src = "/%s/media%s" % (folder, _src)
             img['data-original']= _src
-            img['src'] = '/images/svgs/loader-spinner.svg'
-            img['class'] = 'lazy'
-        elif abs_hyper_link_pattern.match(src):
+        else:
             img['data-original']= src
-            img['src'] = '/images/svgs/loader-spinner.svg'
-            img['class'] = 'lazy'
+        img['src'] = '/images/svgs/loader-spinner.svg'
+        img['class'] = 'lazy'
 
 # Write html
 with open(file_path, 'w', encoding='utf-8') as f:
