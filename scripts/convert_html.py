@@ -30,7 +30,6 @@ for link in soup.find_all('a'):
         result = pingcap_com_blog_or_case_hyper_link_pattern.match(href)
         if result:
             href = "https://pingcap.com.cn/%s/%s" % (result.groups()[1], result.groups()[2])
-            print("href", href)
         elif (not abs_hyper_link_pattern.match(href)) and href.rfind('.md') > 0:
             href = href.replace('.md', '')
             href = re.sub(r'^[\.\/]*', '/', href, count=0, flags=0)
@@ -39,7 +38,9 @@ for link in soup.find_all('a'):
 
 for img in soup.find_all('img'):
     src = img['src']
+
     if src:
+        print('before change:====== ', src)
         if (not abs_hyper_link_pattern.match(src)) and image_rel_src_pattern.match(src):
             _src = re.sub(r'[\.\/]*media\/', '/', src, count=0, flags=0)
             if (folder == 'blog') or (folder == 'case'):

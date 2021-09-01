@@ -420,7 +420,7 @@ gulp.task('js', buildJs)
   "index_name": "pingcap",
   "start_urls": [
     {
-      "url": "https://pingcap.com/docs/",
+      "url": "https://docs.pingcap.com/",
       "selectors_key": "doc",
       "tags": [
         "en",
@@ -430,7 +430,7 @@ gulp.task('js', buildJs)
     ...
   ],
   "sitemap_urls": [
-    "https://pingcap.com/sitemap.xml"
+    "https://pingcap.com.cn/sitemap.xml"
   ],
   "stop_urls": [],
   "selectors": {
