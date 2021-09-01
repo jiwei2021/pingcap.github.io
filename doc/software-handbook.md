@@ -135,7 +135,7 @@ submodule update --init --recursive --remote` 来拉取最新子模块内容来�
 
   {{ block "main" . }}{{ end }}
 
-  <script src="https://download.pingcap.com/js/jquery.min.js"></script>
+  <script src="https://download.pingcap.com.cn/js/jquery.min.js"></script>
   {{ block "footJS" . }}{{ end }}
 
   {{ partial "head/ga" . }}

@@ -1,5 +1,5 @@
 {{- define "headTpl" -}}
-    {{- partial "head/preload-css" (dict "href" "https://download.pingcap.com/style/gridtab.min.css") -}}
+    {{- partial "head/preload-css" (dict "href" "https://download.pingcap.com.cn/style/gridtab.min.css") -}}
     {{- partial "head/preload-css" (dict "href" "/css/practice.css") -}}
     {{$.Scratch.Set "nav_active" "practice"}}
     {{$.Scratch.Set "data_i18_link" "/success-stories" }}
@@ -25,7 +25,7 @@
 {{- end -}}
 
 {{- define "footJS" -}}
-<script type="text/javascript" src="https://download.pingcap.com/js/gridtab.min.js"></script>
+<script type="text/javascript" src="https://download.pingcap.com.cn/js/gridtab.min.js"></script>
 <script type="text/javascript" src="/js/vendor/lazyload.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
