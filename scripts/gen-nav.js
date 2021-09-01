@@ -2,7 +2,6 @@ const fs = require('fs')
 const tableRe = /^[\-\+]\s?.*(\n^\s*[\-\+].*)*/m
 const anchorTitleRe = /(\s*)[\+\-]\s*\[(.*)\]\((.*)\)/
 const titleRe = /^(\s*)[\+\-]\s*([^[]*)/
-const absoluteLink = /https?:\/\/pingcap.com/
 
 function genTableJSONFromMarkdown(source, target, prefix, urlPath) {
   const contents = fs.readFileSync(source, 'utf8')

@@ -1,0 +1,35 @@
+// import global variables
+@import "./variables.less";
+
+@import "./hero-new.less";
+
+.partner {
+  padding-top: @headerHeight;
+  &_list {
+    padding: 60px;
+    text-align: center;
+    &_image {
+      img {
+        width: 100%;
+      }
+
+      @media (min-width: 960px) {
+        &_pc {
+          display: inline-block;
+        }
+        &_mobile {
+          display: none;
+        }
+      }
+
+      @media (max-width: 961px) {
+        &_pc {
+          display: none;
+        }
+        &_mobile {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

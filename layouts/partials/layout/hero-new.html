@@ -1,0 +1,22 @@
+<div class="hero_new">
+    <div class="hero_new_container">
+        <div class="hero_new_container_start">
+            {{- if .title -}}
+            <h1 class='hero_new_container_start_title'>
+                {{ .title }}
+            </h1>
+            {{- end -}}
+
+            {{- if .subtitle -}}
+            <h2 class='hero_new_container_start_subtitle'>
+                {{ .subtitle }}
+            </h2>
+            {{- end -}}
+        </div>
+        <div class='hero_new_container_end'>
+            {{- if .image -}}
+                <img class="hero_new_container_end_image" src="{{ .image }}" alt="" />
+            {{- end -}}
+        </div>
+    </div>
+</div>

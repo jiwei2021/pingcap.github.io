@@ -1,13 +1,18 @@
-
 // import global variables
 @import "./variables.less";
 // import partials
 @import "./flap-cards.less";
 
-@import "./hero.less";
+@import "./hero-new.less";
 @import "./list.less";
 
-.cases,
+.practice {
+  .container {
+    margin-top: 60px;
+  }
+}
+
+.practice,
 .news,
 .contact-us {
   padding-top: @headerHeight;
@@ -27,11 +32,11 @@
   }
 
   .contact-form {
-      margin: 80px auto;
-    }
+    margin: 80px auto;
+  }
 }
 
-.cases,
+.practice,
 .news {
   .list {
     width: 100%;
@@ -39,7 +44,7 @@
   }
 }
 
-.cases {
+.practice {
   .banner {
     position: relative;
     height: 320px;

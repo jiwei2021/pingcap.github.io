@@ -9,12 +9,6 @@ import sys
 if sys.version_info.major == 3:
     unicode = str
 
-try:
-    reload(sys) # Python 2.7
-    sys.setdefaultencoding('utf-8')
-except NameError:
-    pass
-
 abs_hyper_link_pattern = re.compile(r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}')
 image_rel_src_pattern = re.compile(r'^[\.\/]*media\/')
 
@@ -27,8 +21,8 @@ default_version = ''
 if file_path == "dist/docs/index.html" or file_path == "dist/docs-cn/index.html":
     default_version = '/stable'
 
-with open(file_path, 'r') as f:
-    soup = BeautifulSoup(f.read(), 'lxml')
+with open(file_path, 'r', encoding='utf-8') as f:
+    soup = BeautifulSoup(f.read(), 'html.parser')
 
 for link in soup.find_all('a'):
     href = link['href']
@@ -36,7 +30,6 @@ for link in soup.find_all('a'):
         result = pingcap_com_blog_or_case_hyper_link_pattern.match(href)
         if result:
             href = "https://pingcap.com.cn/%s/%s" % (result.groups()[1], result.groups()[2])
-            print("href", href)
         elif (not abs_hyper_link_pattern.match(href)) and href.rfind('.md') > 0:
             href = href.replace('.md', '')
             href = re.sub(r'^[\.\/]*', '/', href, count=0, flags=0)
@@ -45,21 +38,23 @@ for link in soup.find_all('a'):
 
 for img in soup.find_all('img'):
     src = img['src']
+
     if src:
         if (not abs_hyper_link_pattern.match(src)) and image_rel_src_pattern.match(src):
             _src = re.sub(r'[\.\/]*media\/', '/', src, count=0, flags=0)
-            if (folder == 'blog') or (folder == 'case'):
+            if (folder == 'case'):
                 folder = 'blog-cn'
-
-            _src = 'https://download.pingcap.com/images/' + folder + _src
+                _src = 'https://download.pingcap.com.cn/images/' + folder + _src
+            else:
+                _src = "/%s/media%s" % (folder, _src)
+#             _src = "/%s/media%s" % (folder, _src)
             img['data-original']= _src
-            img['src'] = '/images/svgs/loader-spinner.svg'
-            img['class'] = 'lazy'
-        elif abs_hyper_link_pattern.match(src):
+            print("_src", _src)
+        else:
             img['data-original']= src
-            img['src'] = '/images/svgs/loader-spinner.svg'
-            img['class'] = 'lazy'
+        img['src'] = '/images/svgs/loader-spinner.svg'
+        img['class'] = 'lazy'
 
 # Write html
-with open(file_path, 'w') as f:
+with open(file_path, 'w', encoding='utf-8') as f:
     f.write(unicode(soup))

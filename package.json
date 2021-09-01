@@ -11,8 +11,11 @@
     "clean": "rimraf dist",
     "gen-content": "bash ./scripts/gen-content.sh",
     "lint": "eslint src",
-    "prestart": "npm run clean && export NODE_ENV=development; gulp build && bash ./scripts/process-docs.sh",
-    "start": "gulp server"
+    "prestart": "npm run clean && export NODE_ENV=development; gulp build && ./scripts/process-docs.sh",
+    "start": "gulp server",
+    "dev:full": "git submodule sync && git submodule update --init --remote --recursive && npm run gen-content && export NODE_ENV=production && ./scripts/build-check-err.sh && npm run clean && export NODE_ENV=development && gulp build && ./scripts/process-docs.sh && gulp server\n",
+    "dev:server": "npm run clean && export NODE_ENV=development && gulp build && ./scripts/process-docs.sh && gulp server",
+    "dev:fast": "npm run clean && export NODE_ENV=development && gulp build && gulp server"
   },
   "license": "MIT",
   "dependencies": {

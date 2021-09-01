@@ -1,0 +1,56 @@
+// import global variables
+@import "./variables.less";
+
+@import "./hero-new.less";
+
+.case {
+  padding-top: @headerHeight;
+  padding-bottom: 64px;
+  &_list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    &_title {
+      margin: 64px 0;
+      font-size: 20px;
+      border-bottom: 4px solid #3D3FEA;
+    }
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .case {
+    &_list {
+      align-items: start;
+      &_image {
+        &_pc {
+          display: inline-block;
+        }
+        &_mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 961px) {
+  .case {
+    &_list {
+      align-items: center;
+      &_image {
+        &_pc {
+          display: none;
+        }
+        &_mobile {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

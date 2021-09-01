@@ -15,11 +15,11 @@ replace_dist_html_link() {
       elif [[ ! -d "$html" ]] && echo "$html" | grep -E '\.html$' > /dev/null;then
         set +e
         if grep -E 'href=\"\S+\.md' $html > /dev/null;then
-          python scripts/convert_html.py $html $repo_name
+          python3 scripts/convert_html.py $html $repo_name
         elif grep -E 'img src=\"[\.\/]*media\/' $html > /dev/null;then
-          python scripts/convert_html.py $html $repo_name
+          python3 scripts/convert_html.py $html $repo_name
         elif grep -E 'href=\"https:\/\/pingcap.com\/(blog|cases?)-cn\/' $html > /dev/null;then
-          python scripts/convert_html.py $html $repo_name
+          python3 scripts/convert_html.py $html $repo_name
         fi
         set -e
       fi
@@ -27,7 +27,7 @@ replace_dist_html_link() {
   fi
 }
 
-misc_repos=(blog meetup)
+misc_repos=(blog news)
 
 for repo in "${misc_repos[@]}"
 do
@@ -45,13 +45,13 @@ echo "end time" $end_time
 replace_dist_html_link "dist/case" "case"
 echo "finish all replacement"
 
-parent_dir="`echo $(pwd) | sed 's;/scripts;;g'`/dist"
-rm_images_from_media_docs() {
-  repo_name=$1
-  rm -rf $parent_dir/$repo_name/media
-}
+#parent_dir="`echo $(pwd) | sed 's;/scripts;;g'`/dist"
+#rm_images_from_media_docs() {
+#  repo_name=$1
+#  rm -rf $parent_dir/$repo_name/media
+#}
 
 # mv blog-cn/cases-cn in media to dist/images
 
-rm_images_from_media_docs blog
-rm_images_from_media_docs meetup
+#rm_images_from_media_docs blog
+#rm_images_from_media_docs meetup
