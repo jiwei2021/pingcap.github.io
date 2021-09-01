@@ -40,7 +40,6 @@ for img in soup.find_all('img'):
     src = img['src']
 
     if src:
-        print('before change:====== ', src)
         if (not abs_hyper_link_pattern.match(src)) and image_rel_src_pattern.match(src):
             _src = re.sub(r'[\.\/]*media\/', '/', src, count=0, flags=0)
             if (folder == 'blog') or (folder == 'case'):
@@ -51,7 +50,6 @@ for img in soup.find_all('img'):
             img['data-original']= _src
             img['src'] = '/images/svgs/loader-spinner.svg'
             img['class'] = 'lazy'
-            print("_src", _src)
         elif abs_hyper_link_pattern.match(src):
             img['data-original']= src
             img['src'] = '/images/svgs/loader-spinner.svg'
