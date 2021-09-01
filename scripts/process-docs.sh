@@ -14,7 +14,7 @@ replace_dist_html_link() {
         replace_dist_html_link "$html" $repo_name
       elif [[ ! -d "$html" ]] && echo "$html" | grep -E '\.html$' > /dev/null;then
         set +e
-        echo "python version:===== " python --version
+        python --version
         if grep -E 'href=\"\S+\.md' $html > /dev/null;then
           python scripts/convert_html.py $html $repo_name
         elif grep -E 'img src=\"[\.\/]*media\/' $html > /dev/null;then
