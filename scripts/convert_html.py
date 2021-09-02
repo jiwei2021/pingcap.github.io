@@ -49,7 +49,6 @@ for img in soup.find_all('img'):
                 _src = "/%s/media%s" % (folder, _src)
 #             _src = "/%s/media%s" % (folder, _src)
             img['data-original']= _src
-            print("_src", _src)
         else:
             img['data-original']= src
         img['src'] = '/images/svgs/loader-spinner.svg'
